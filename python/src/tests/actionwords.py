@@ -1,0 +1,39 @@
+# encoding: UTF-8
+
+from coffee_machine import CoffeeMachine
+
+class Actionwords:
+    def __init__(self):
+        self.sut = CoffeeMachine()
+
+    def start_the_coffee_machine(self):
+        self.sut.start()
+
+    def shutdown_coffee_machine(self):
+        self.sut.stop()
+
+    def assert_displayed_message(self, message):
+        assert(self.sut.message, message)
+
+    def assert_coffee_served(self):
+        assert(self.sut.coffee_served)
+
+    def assert_no_coffee_is_served(self):
+        assert(not self.sut.coffee_served)
+
+    def take_a_coffee(self):
+        self.sut.take_coffee()
+
+    def empty_coffee_grounds(self):
+        self.sut.empty_grounds()
+
+    def fill_beans(self):
+        self.sut.fill_beans()
+
+    def fill_water_tank(self):
+        self.sut.fill_tank()
+
+    def take_coffees(self, coffee_number = 10):
+        while ((coffee_number >= 0)):
+            self.take_a_coffee()
+            coffee_number = coffee_number - 1
