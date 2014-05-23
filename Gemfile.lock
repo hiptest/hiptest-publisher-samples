@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.7.3)
+    i18n (0.6.9)
+    mini_portile (0.6.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
+    parseconfig (1.0.4)
+    zest-publisher (0.0.7)
+      colorize (~> 0.7, >= 0.7.3)
+      i18n (~> 0.6, >= 0.6.9)
+      nokogiri (~> 1.6.2, >= 1.6.2.1)
+      parseconfig (~> 1.0, >= 1.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  zest-publisher (>= 0.0.7)
