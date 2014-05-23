@@ -20,13 +20,13 @@ class CoffeeMachine:
         if not self.started:
               return ""
 
-        if self.tank_content < 10:
+        if self.tank_content <= 10:
             return "Fill tank"
 
         if self.beans_content < 3:
             return "Fill beans"
 
-        if self.grounds_content > 30:
+        if self.grounds_content >= 30:
             return "Empty grounds"
 
         return "Ready"

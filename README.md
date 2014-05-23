@@ -13,15 +13,7 @@ The SUT is a (not that much) simple coffee machine. You sart it, you ask for a c
 Languages:
 ----------
 
-### Python:
+Each supported language by Zest publisher has some examples:
 
-The project uses buildout, to set it up:
-
-    cd python
-    python bootstrap.py
-    bin/buildout
-
-Then run the tests:
-
-    bin/test
-
+ - [Python](https://github.com/Smartesting/zest-publisher-samples/blob/master/python/README.md)
+ - [Ruby](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/README.md)

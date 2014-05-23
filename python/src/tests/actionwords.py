@@ -3,8 +3,9 @@
 from coffee_machine import CoffeeMachine
 
 class Actionwords:
-    def __init__(self):
+    def __init__(self, test):
         self.sut = CoffeeMachine()
+        self.test = test
 
     def start_the_coffee_machine(self):
         self.sut.start()
@@ -13,13 +14,13 @@ class Actionwords:
         self.sut.stop()
 
     def assert_displayed_message(self, message):
-        assert(self.sut.message, message)
+        self.test.assertEqual(self.sut.message, message)
 
     def assert_coffee_served(self):
-        assert(self.sut.coffee_served)
+        self.test.assertTrue(self.sut.coffee_served)
 
     def assert_no_coffee_is_served(self):
-        assert(not self.sut.coffee_served)
+        self.test.assertFalse(self.sut.coffee_served)
 
     def take_a_coffee(self):
         self.sut.take_coffee()
@@ -34,6 +35,6 @@ class Actionwords:
         self.sut.fill_tank()
 
     def take_coffees(self, coffee_number = 10):
-        while ((coffee_number >= 0)):
+        while (coffee_number > 0):
             self.take_a_coffee()
             coffee_number = coffee_number - 1
