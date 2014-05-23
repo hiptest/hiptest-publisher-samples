@@ -5,9 +5,9 @@ In this repository you'll find tests generated from [Zest](https://www.zest-test
 
 The goals are:
 
- * to show how tests are exported in the various laguages
- * to test frameworks
- * to check frameworks work as expected
+ * to show how tests are exported in the various languages
+ * to test export in various languages and frameworks
+ * to check exports work out of the box (well, with implemented actionwords)
 
 System under test
 ------------------
