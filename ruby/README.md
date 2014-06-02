@@ -5,7 +5,7 @@ First, you must use ``bundle`` to get the gems to run the tests:
 
     bundle install
 
-The SUT immplementation can be seen in [``src/coffee_machine.rb``](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/src/coffee_machine.rb)
+The SUT implementation can be seen in [``src/coffee_machine.rb``](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/src/coffee_machine.rb)
 
 Rspec
 -----
