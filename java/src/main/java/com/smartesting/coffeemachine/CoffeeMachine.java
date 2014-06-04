@@ -1,9 +1,11 @@
 package com.smartesting.coffeemachine;
 
-public class CoffeeMachine
-{
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+public class CoffeeMachine {
+
     private boolean started = false;
-    private boolean coffeeServed = false;
+    public boolean coffeeServed = false;
     private int tankContent;
     private int beansContent;
     private int groundsContent;
@@ -41,16 +43,15 @@ public class CoffeeMachine
         }
     }
 
-    private void fillTank() {
+    public void fillTank() {
         tankContent = 60;
     }
 
-    private void fillBeans() {
+    public void fillBeans() {
         beansContent = 40;
     }
 
-
-    private void emptyGrounds() {
+    public void emptyGrounds() {
         groundsContent = 0;
     }
 }
