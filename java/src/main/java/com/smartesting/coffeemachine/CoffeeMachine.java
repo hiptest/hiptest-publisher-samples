@@ -1,7 +1,5 @@
 package com.smartesting.coffeemachine;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class CoffeeMachine {
 
     private boolean started = false;
