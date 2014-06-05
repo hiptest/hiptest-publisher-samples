@@ -10,3 +10,7 @@ zest-publisher -c unittest.conf --tests-only
 python bootstrap.py
 bin/buildout
 bin/test
+
+cd ../java
+zest-publisher -c junit.conf --tests-only
+mvn package
