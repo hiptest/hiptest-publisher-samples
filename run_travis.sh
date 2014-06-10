@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+set -ev
 
 header() {
   local msg=$1
