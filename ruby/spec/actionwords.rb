@@ -16,15 +16,15 @@ module Actionwords
   end
 
   def assert_displayed_message(message)
-    sut.message.should eq(message)
+    expect(sut.message).to eq(message)
   end
 
   def assert_coffee_served
-    sut.coffee_served.should be_true
+    expect(sut.coffee_served).to be_truthy
   end
 
   def assert_no_coffee_is_served
-    sut.coffee_served.should be_false
+    expect(sut.coffee_served).to be_falsey
   end
 
   def take_a_coffee
