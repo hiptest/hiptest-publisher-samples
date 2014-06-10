@@ -15,6 +15,8 @@ logMessage() {
   echo "-------------------------------------------------------------------------------"
 }
 
+gem install zest-publisher
+
 cd ruby
 header "Ruby"
 
