@@ -1,0 +1,25 @@
+*** Settings ***
+Documentation
+...  Well, sometimes, you just get a coffee.
+
+Resource          keywords.txt
+
+
+Test Template     simple_use
+
+*** Test Cases ***	lang	ready_message
+English	en	Ready
+French	fr	Pret
+
+
+*** Keywords ***
+
+simple_use
+	[Arguments]	${lang}	${ready_message}
+	assert_displayed_message	
+	start_the_coffee_machine	${lang}
+	assert_displayed_message	${ready_message}
+	take_a_coffee
+	assert_coffee_served
+	shutdown_coffee_machine
+	assert_displayed_message	
