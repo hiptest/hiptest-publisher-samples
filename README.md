@@ -1,6 +1,8 @@
 Zest publisher: samples
 =======================
 
+[![Build Status](https://travis-ci.org/Smartesting/zest-publisher-samples.svg?branch=master)](https://travis-ci.org/Smartesting/zest-publisher-samples)
+
 In this repository you'll find tests generated from [Zest](https://www.zest-testing.com), using [Zest publisher](https://github.com/Smartesting/zest-publisher).
 
 The goals are:
