@@ -22,10 +22,16 @@ header "Ruby"
 
 logMessage "Installing"
 bundle install
-logMessage "Updating tests"
+
+logMessage "Updating rspec tests"
 zest-publisher -c rspec.conf --tests-only
-logMessage "Running tests"
+logMessage "Running rspec tests"
 bundle exec rspec
+
+logMessage "Updating minitest tests"
+zest-publisher -c minitest.conf --tests-only
+logMessage "Running minitest tests"
+bundle exec ruby test/project_test.rb
 cd -
 
 cd python
