@@ -67,6 +67,6 @@ logMessage "Updating tests"
 zest-publisher -c robotframework.conf --split-scenarios --test-only
 
 logMessage "Running tests"
-pybot tests/test_*
+pybot -P src:tests tests/test_*
 
 cd -
