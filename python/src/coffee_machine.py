@@ -26,7 +26,7 @@ class CoffeeMachine:
                 'ready': 'Ready'
             },
             'fr': {
-                'tank': 'Remplier reservoir',
+                'tank': 'Remplir reservoir',
                 'beans': 'Ajouter grains',
                 'grounds': 'Vider marc',
                 'ready': 'Pret'
