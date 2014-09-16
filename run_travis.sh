@@ -56,3 +56,17 @@ logMessage "Packaging and running tests"
 mvn package
 
 cd -
+
+cd robotframework
+header "Robot framework"
+
+logMessage "Installing"
+pip install robotframework
+
+logMessage "Updating tests"
+zest-publisher -c robotframework.conf --split-scenarios --test-only
+
+logMessage "Running tests"
+pybot tests/test_*
+
+cd -
