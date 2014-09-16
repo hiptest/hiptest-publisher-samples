@@ -21,4 +21,5 @@ Each supported language by Zest publisher has some examples:
 
  - [Python](https://github.com/Smartesting/zest-publisher-samples/blob/master/python/README.md)
  - [Ruby](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/README.md)
+ - [Java](https://github.com/Smartesting/zest-publisher-samples/blob/master/java/README.md)
 
