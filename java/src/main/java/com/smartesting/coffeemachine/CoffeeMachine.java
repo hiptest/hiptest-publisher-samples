@@ -1,5 +1,8 @@
 package com.smartesting.coffeemachine;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CoffeeMachine {
 
     private boolean started = false;
@@ -7,6 +10,7 @@ public class CoffeeMachine {
     private int tankContent;
     private int beansContent;
     private int groundsContent;
+    private String lang;
 
     public CoffeeMachine() {
         fillTank();
@@ -14,8 +18,9 @@ public class CoffeeMachine {
         emptyGrounds();
     }
 
-    public void start() {
+    public void start(String lang) {
         started = true;
+        this.lang = lang;
     }
 
     public void stop() {
@@ -23,11 +28,11 @@ public class CoffeeMachine {
     }
 
     public String message() {
-        if (!started) return "";
-        if (tankContent <= 10) return "Fill tank";
-        if (beansContent < 3) return "Fill beans";
-        if (groundsContent >= 30) return "Empty grounds";
-        return "Ready";
+        if(!started) return "";
+        if (tankContent <= 10) return i18n("tank");
+        if (beansContent < 3) return i18n("beans");
+        if (groundsContent >= 30) return i18n("grounds");
+        return i18n("ready");
     }
 
     public void takeCoffee() {
@@ -52,4 +57,21 @@ public class CoffeeMachine {
     public void emptyGrounds() {
         groundsContent = 0;
     }
+
+    private String i18n(String key) {
+        Map<String,String> map = new HashMap<String, String>();
+        if (lang.equals("fr")) {
+            map.put("tank", "Remplir reservoir");
+            map.put("beans", "Ajouter grains");
+            map.put("grounds", "Vider marc");
+            map.put("ready", "Pret");
+        } else {
+            map.put("tank", "Fill tank");
+            map.put("beans", "Fill beans");
+            map.put("grounds", "Empty grounds");
+            map.put("ready", "Ready");
+        }
+        return map.get(key);
+    }
+
 }

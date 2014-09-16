@@ -8,7 +8,11 @@ public class Actionwords {
     public CoffeeMachine sut = new CoffeeMachine();
 
     public void startTheCoffeeMachine() {
-        sut.start();
+        sut.start("en");
+    }
+
+    public void startTheCoffeeMachine(String lang) {
+        sut.start(lang);
     }
 
     public void shutdownCoffeeMachine() {
