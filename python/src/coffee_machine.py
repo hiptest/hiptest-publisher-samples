@@ -9,11 +9,31 @@ class CoffeeMachine:
 
         self._last_coffee_success = False
 
-    def start(self):
+    def start(self, lang = 'en'):
         self.started = True
+        self.lang = lang
 
     def stop(self):
         self.started = False
+
+    @property
+    def messages(self):
+        i18n = {
+            'en': {
+                'tank': 'Fill tank',
+                'beans': 'Fill beans',
+                'grounds': 'Empty grounds',
+                'ready': 'Ready'
+            },
+            'fr': {
+                'tank': 'Remplier reservoir',
+                'beans': 'Ajouter grains',
+                'grounds': 'Vider marc',
+                'ready': 'Pret'
+            }
+        }
+
+        return i18n[self.lang]
 
     @property
     def message(self):
@@ -21,15 +41,15 @@ class CoffeeMachine:
               return ""
 
         if self.tank_content <= 10:
-            return "Fill tank"
+            return self.messages['tank']
 
         if self.beans_content < 3:
-            return "Fill beans"
+            return self.messages['beans']
 
         if self.grounds_content >= 30:
-            return "Empty grounds"
+            return self.messages['grounds']
 
-        return "Ready"
+        return self.messages['ready']
 
     @property
     def coffee_served(self):

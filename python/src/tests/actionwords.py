@@ -1,5 +1,4 @@
 # encoding: UTF-8
-
 from coffee_machine import CoffeeMachine
 
 class Actionwords:
@@ -7,8 +6,8 @@ class Actionwords:
         self.sut = CoffeeMachine()
         self.test = test
 
-    def start_the_coffee_machine(self):
-        self.sut.start()
+    def start_the_coffee_machine(self, lang = 'en'):
+        self.sut.start(lang)
 
     def shutdown_coffee_machine(self):
         self.sut.stop()
