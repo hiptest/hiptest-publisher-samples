@@ -12,21 +12,40 @@ class CoffeeMachine
     @coffee_served = false
   end
 
-  def start
+  def start(lang = 'en')
     @started = true
+    @lang = lang.to_sym
   end
 
   def stop
     @started = false
   end
 
+  def messages
+    i18n = {
+      en: {
+        tank: 'Fill tank',
+        beans: 'Fill beans',
+        grounds: 'Empty grounds',
+        ready: 'Ready'
+      },
+      fr: {
+        tank: 'Remplir reservoir',
+        beans: 'Ajouter grains',
+        grounds: 'Vider marc',
+        ready: 'Pret'
+      }
+    }
+    return i18n[@lang]
+  end
+
   def message
     return '' unless @started
 
-    return "Fill tank" if @tank_content <= 10
-    return "Fill beans" if @beans_content < 3
-    return "Empty grounds" if @grounds_content >= 30
-    return "Ready"
+    return messages[:tank] if @tank_content <= 10
+    return messages[:beans] if @beans_content < 3
+    return messages[:grounds] if @grounds_content >= 30
+    return messages[:ready]
   end
 
   def take_coffee

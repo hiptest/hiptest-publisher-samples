@@ -7,8 +7,8 @@ module Actionwords
     @sut ||= CoffeeMachine.new
   end
 
-  def start_the_coffee_machine
-    sut.start
+  def start_the_coffee_machine(lang = 'en')
+    sut.start(lang)
   end
 
   def shutdown_coffee_machine
