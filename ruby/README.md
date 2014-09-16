@@ -16,7 +16,7 @@ To run the rspec tests:
 
 To update the tests:
 
-    zest-publisher -c rspec.config --tests-only
+    zest-publisher -c rspec.conf --tests-only
 
 The tests are generated in [``spec/project_spec.rb``](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/spec/project_spec.rb)
 
@@ -29,6 +29,6 @@ To run the minitest tests:
 
 To update the tests:
 
-    zest-publisher -c minitest.config --tests-only
+    zest-publisher -c minitest.conf --tests-only
 
 The tests are generated in [``test/project_spec.rb``](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/test/project_spec.rb)
