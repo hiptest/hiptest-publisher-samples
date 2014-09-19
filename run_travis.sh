@@ -47,8 +47,8 @@ bin/test
 
 cd -
 
-cd java
-header "Java"
+cd java-junit
+header "Java / JUnit"
 
 logMessage "Updating tests"
 zest-publisher -c junit.conf --tests-only
@@ -56,6 +56,17 @@ logMessage "Packaging and running tests"
 mvn package
 
 cd -
+
+cd java-testng
+header "Java / TestNG"
+
+logMessage "Updating tests"
+zest-publisher -c testng.config --tests-only
+logMessage "Packaging and running tests"
+mvn package
+
+cd -
+
 
 cd robotframework
 header "Robot framework"
