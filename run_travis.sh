@@ -51,7 +51,7 @@ cd java-junit
 header "Java / JUnit"
 
 logMessage "Updating tests"
-zest-publisher -c junit.conf --tests-only
+zest-publisher -c junit.config --tests-only
 logMessage "Packaging and running tests"
 mvn package
 
