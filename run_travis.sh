@@ -72,7 +72,7 @@ cd robotframework
 header "Robot framework"
 
 logMessage "Installing"
-pip install robotframework
+sudo pip install robotframework
 
 logMessage "Updating tests"
 zest-publisher -c robotframework.conf --split-scenarios --test-only
