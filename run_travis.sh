@@ -81,3 +81,14 @@ logMessage "Running tests"
 pybot -P src:tests tests/test_*
 
 cd -
+
+cd javascript
+header "Javascript"
+
+cd "selenium-ide"
+logMessage "Updating Selenium IDE scripts"
+zest-publisher -c seleniumide.conf
+zest-publisher -c seleniumide.conf --split-scenarios
+cd ..
+
+cd ..
