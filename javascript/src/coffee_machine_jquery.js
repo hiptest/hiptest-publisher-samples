@@ -29,7 +29,7 @@
     if (coffeeMachine.get('started')) {
       coffeeMachine.stop();
     } else {
-      coffeeMachine.start();
+      coffeeMachine.start($('select#lang').val());
     }
   });
 

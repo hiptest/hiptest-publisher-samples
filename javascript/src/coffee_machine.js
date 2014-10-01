@@ -86,8 +86,8 @@ function CoffeeMachine () {
   instance.addListener('grounds', updateMessage);
 
   instance.start = function (lang) {
-    instance.set('started', true);
     instance.set('lang', lang || 'en');
+    instance.set('started', true);
     instance.set('coffeeServed', false);
   }
 
