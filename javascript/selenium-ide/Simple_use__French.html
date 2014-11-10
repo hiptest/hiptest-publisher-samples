@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head profile="http://selenium-ide.openqa.org/profiles/test-case">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="selenium.base" href="http://selenium.googlecode.com/" />
+    <title>Simple use - French</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td colspan="3">Simple use - French</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>refresh</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>waitForPageToLoad</td>
+          <td>500</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>verifyText</td>
+          <td>css=#message</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>select</td>
+          <td>id=lang</td>
+          <td>fr</td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>id=onOff</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>verifyText</td>
+          <td>css=#message</td>
+          <td>Pret</td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>id=getCoffee</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>verifyElementPresent</td>
+          <td>css=#coffee.served</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>id=onOff</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>verifyText</td>
+          <td>css=#message</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

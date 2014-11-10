@@ -1,0 +1,75 @@
+#coffee-machine {
+  position: relative;
+  width: 500px;
+  height: 500px;
+
+  background: transparent url('./imgs/machine.png') no-repeat center center;
+}
+
+#coffee-machine div {
+  margin: 0px;
+  padding: 0px;
+
+  position: absolute;
+}
+
+#coffee-machine #tank {
+  width: 30px;
+  height: 300px;
+  background: blue url('./imgs/tank.png') repeat-y center center;
+
+  left: 51px;
+  bottom: 96px;
+}
+
+#coffee-machine #grounds {
+  width: 200px;
+  background: #140A00;
+
+  right: 150px;
+  bottom: 96px;
+}
+
+#coffee-machine #beans {
+  width: 30px;
+  height: 300px;
+  background: #663300 url('./imgs/beans.png') repeat-y center center;
+
+  right: 51px;
+  bottom: 96px;
+}
+
+#coffee-machine #message {
+  width: 300px;
+  height: 20px;
+
+  color: red;
+  text-align: center;
+
+  right: 100px;
+  top: 100px;
+}
+
+#coffee-machine #actions {
+  width: 300px;
+  height: 20px;
+
+  text-align: center;
+
+  right: 100px;
+  top: 130px;
+}
+
+#coffee-machine #coffee {
+  width: 150px;
+  height: 150px;
+
+  bottom: 97px;
+  right: 175px;
+
+  background: transparent url('./imgs/coffee.png') repeat-y center center;
+}
+
+#coffee-machine #coffee.served {
+  background: transparent url('./imgs/coffee_served.png') repeat-y center center;
+}

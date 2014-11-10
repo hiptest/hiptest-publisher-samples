@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Coffee machine sample</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/coffee_machine.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1> Coffee machine sample</h1>
+
+      <label>Language:
+        <select id="lang">
+          <option value="en">en</option>
+          <option value="fr">fr</option>
+        </select>
+      </label>
+      <div id="coffee-machine">
+        <div id="tank"></div>
+        <div id="grounds"></div>
+        <div id="beans"></div>
+        <div id="actions">
+          <button class="btn" id="onOff" title="Power"><i class="glyphicon glyphicon-off"></i></button>
+          <button class="btn" id="getCoffee" title="Take a coffee"><i class="glyphicon glyphicon-tint"></i></button>
+          <button class="btn" id="emptyGround" title="Empty grounds"><i class="glyphicon glyphicon-trash"></i></button>
+          <button class="btn" id="fillWater" title="Fill water tank"><i class="glyphicon glyphicon-cloud"></i></button>
+          <button class="btn" id="fillBeans" title="Fill beans"><i class="glyphicon glyphicon-heart"></i></button>
+        </div>
+        <div id="message"></div>
+        <div id="coffee"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="src/coffee_machine.js"></script>
+    <script src="src/coffee_machine_jquery.js"></script>
+  </body>
+</html>
