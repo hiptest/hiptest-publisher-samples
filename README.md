@@ -1,9 +1,9 @@
 Hiptest publisher: samples
 =======================
 
-[![Build Status](https://travis-ci.org/Smartesting/zest-publisher-samples.svg?branch=master)](https://travis-ci.org/Smartesting/zest-publisher-samples)
+[![Build Status](https://travis-ci.org/hiptest/hiptest-publisher-samples.svg)](https://travis-ci.org/hiptest/hiptest-publisher-samples)
 
-In this repository you'll find tests generated from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/Smartesting/zest-publisher).
+In this repository you'll find tests generated from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
