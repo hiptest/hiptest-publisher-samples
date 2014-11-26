@@ -1,4 +1,4 @@
-package com.smartesting.testng.coffeemachine;
+package com.coffeemachine;
 
 import java.util.HashMap;
 import java.util.Map;

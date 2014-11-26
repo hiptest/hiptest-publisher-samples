@@ -1,4 +1,4 @@
-package com.smartesting.coffeemachine;
+package com.coffeemachine;
 
 import junit.framework.TestCase;
 

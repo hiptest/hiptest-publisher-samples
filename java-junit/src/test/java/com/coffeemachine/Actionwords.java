@@ -1,4 +1,4 @@
-package com.smartesting.coffeemachine;
+package com.coffeemachine;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;

@@ -1,4 +1,4 @@
-package com.smartesting.testng.coffeemachine;
+package com.testng.coffeemachine;
 
 import org.testng.annotations.*;
 
