@@ -6,7 +6,7 @@ The project uses [buildout](http://www.buildout.org/en/latest/), to set it up:
     python bootstrap.py
     bin/buildout
 
-The SUT immplementation can be seen in [``src/coffee_machine.py``](https://github.com/Smartesting/zest-publisher-samples/blob/master/python/src/coffee_machine.py)
+The SUT immplementation can be seen in [``src/coffee_machine.py``](https://github.com/hiptest/hiptest-publisher-samples/blob/master/python/src/coffee_machine.py)
 
 
 UnitTest:
@@ -18,7 +18,7 @@ To run the unittest tests:
 
 To update the tests:
 
-    zest-publisher -c unittest.conf --tests-only
+    hiptest-publisher -c unittest.conf --tests-only
 
-The tests are generated in [``src/tests/test_project.py``](https://github.com/Smartesting/zest-publisher-samples/blob/master/python/src/tests/test_project.py)
+The tests are generated in [``src/tests/test_project.py``](https://github.com/hiptest/hiptest-publisher-samples/blob/master/python/src/tests/test_project.py)
 

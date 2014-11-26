@@ -7,8 +7,8 @@ In Selenium IDE, open a test suite (File > Open Test Suite ...) and select the f
 
 To update the test, run the following commands:
 
-    zest-publisher -c seleniumide.conf
-    zest-publisher -c seleniumide.conf --split-scenarios
+    hiptest-publisher -c seleniumide.conf
+    hiptest-publisher -c seleniumide.conf --split-scenarios
 
 Note that we usually run only one command. This time, there is one command to generate the test suite and one to generate the tests.
 

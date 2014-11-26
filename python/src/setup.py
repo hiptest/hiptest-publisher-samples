@@ -3,10 +3,10 @@
 from distutils.core import setup
 
 setup(
-    name='zestpublishersamples',
+    name='hiptestpublishersamples',
     version='0.1',
     description='Simple monitoring tool',
     author='Smartesting',
     author_email='v.pretre@smartesting.com',
-    url='https://github.com/Smartesting/zest-publisher-samples',
+    url='https://github.com/hiptest/hiptest-publisher-samples',
     packages=[])

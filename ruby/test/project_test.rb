@@ -3,7 +3,7 @@
 require 'minitest/autorun'
 require_relative 'actionwords'
 
-class TestCoffeeMachineZestPublisherSample < MiniTest::Unit::TestCase
+class TestCoffeeMachineHiptestPublisherSample < MiniTest::Unit::TestCase
   include Actionwords
 
   def simple_use(lang, ready_message)

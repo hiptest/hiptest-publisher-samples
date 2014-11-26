@@ -2,7 +2,7 @@
 require 'spec_helper'
 require_relative 'actionwords'
 
-describe 'CoffeeMachineZestPublisherSample' do
+describe 'CoffeeMachineHiptestPublisherSample' do
   include Actionwords
 
   context "Simple use" do

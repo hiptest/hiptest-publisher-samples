@@ -15,7 +15,7 @@ logMessage() {
   echo "-------------------------------------------------------------------------------"
 }
 
-gem install zest-publisher
+gem install hiptest-publisher
 
 cd ruby
 header "Ruby"
@@ -24,12 +24,12 @@ logMessage "Installing"
 bundle install
 
 logMessage "Updating rspec tests"
-zest-publisher -c rspec.conf --tests-only
+hiptest-publisher -c rspec.conf --tests-only
 logMessage "Running rspec tests"
 bundle exec rspec
 
 logMessage "Updating minitest tests"
-zest-publisher -c minitest.conf --tests-only
+hiptest-publisher -c minitest.conf --tests-only
 logMessage "Running minitest tests"
 bundle exec ruby test/project_test.rb
 cd -
@@ -41,7 +41,7 @@ logMessage "Installing"
 python bootstrap.py
 bin/buildout
 logMessage "Updating tests"
-zest-publisher -c unittest.conf --tests-only
+hiptest-publisher -c unittest.conf --tests-only
 logMessage "Running tests"
 bin/test
 
@@ -51,7 +51,7 @@ cd java-junit
 header "Java / JUnit"
 
 logMessage "Updating tests"
-zest-publisher -c junit.config --tests-only
+hiptest-publisher -c junit.config --tests-only
 logMessage "Packaging and running tests"
 mvn package
 
@@ -61,7 +61,7 @@ cd java-testng
 header "Java / TestNG"
 
 logMessage "Updating tests"
-zest-publisher -c testng.config --tests-only
+hiptest-publisher -c testng.config --tests-only
 logMessage "Packaging and running tests"
 mvn package
 
@@ -75,7 +75,7 @@ logMessage "Installing"
 sudo pip install robotframework
 
 logMessage "Updating tests"
-zest-publisher -c robotframework.conf --split-scenarios --test-only
+hiptest-publisher -c robotframework.conf --split-scenarios --test-only
 
 logMessage "Running tests"
 pybot -P src:tests tests/test_*
@@ -87,8 +87,8 @@ header "Javascript"
 
 cd "selenium-ide"
 logMessage "Updating Selenium IDE scripts"
-zest-publisher -c seleniumide.conf
-zest-publisher -c seleniumide.conf --split-scenarios
+hiptest-publisher -c seleniumide.conf
+hiptest-publisher -c seleniumide.conf --split-scenarios
 cd ..
 
 cd ..

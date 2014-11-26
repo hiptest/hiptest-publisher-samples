@@ -2,7 +2,7 @@
 import unittest
 from actionwords import Actionwords
 
-class TestCoffeeMachineZestPublisherSample(unittest.TestCase):
+class TestCoffeeMachineHiptestPublisherSample(unittest.TestCase):
     def setUp(self):
         self.actionwords = Actionwords(self)
 

@@ -1,9 +1,9 @@
-Zest publisher: samples
+Hiptest publisher: samples
 =======================
 
 [![Build Status](https://travis-ci.org/Smartesting/zest-publisher-samples.svg?branch=master)](https://travis-ci.org/Smartesting/zest-publisher-samples)
 
-In this repository you'll find tests generated from [Zest](https://www.zest-testing.com), using [Zest publisher](https://github.com/Smartesting/zest-publisher).
+In this repository you'll find tests generated from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/Smartesting/zest-publisher).
 
 The goals are:
 
@@ -19,11 +19,11 @@ The SUT is a (not that much) simple coffee machine. You start it, you ask for a 
 Languages
 ----------
 
-Each supported language by Zest publisher has some examples:
+Each supported language by Hiptest publisher has some examples:
 
- - [Python](https://github.com/Smartesting/zest-publisher-samples/blob/master/python/README.md)
- - [Ruby](https://github.com/Smartesting/zest-publisher-samples/blob/master/ruby/README.md)
- - Java: [JUnit](https://github.com/Smartesting/zest-publisher-samples/blob/master/java-junit/README.md) / [Test Ng](https://github.com/Smartesting/zest-publisher-samples/blob/master/java-testng/README.md)
- - [Robot framework](https://github.com/Smartesting/zest-publisher-samples/blob/master/robotframework/README.md)
- - [Selenium IDE](https://github.com/Smartesting/zest-publisher-samples/blob/master/javascript/selenium-ide/README.md)
+ - [Python](https://github.com/hiptest/hiptest-publisher-samples/blob/master/python/README.md)
+ - [Ruby](https://github.com/hiptest/hiptest-publisher-samples/blob/master/ruby/README.md)
+ - Java: [JUnit](https://github.com/hiptest/hiptest-publisher-samples/blob/master/java-junit/README.md) / [Test Ng](https://github.com/hiptest/hiptest-publisher-samples/blob/master/java-testng/README.md)
+ - [Robot framework](https://github.com/hiptest/hiptest-publisher-samples/blob/master/robotframework/README.md)
+ - [Selenium IDE](https://github.com/hiptest/hiptest-publisher-samples/blob/master/javascript/selenium-ide/README.md)
 
