@@ -15,7 +15,7 @@ logMessage() {
   echo "-------------------------------------------------------------------------------"
 }
 
-gem install hiptest-publisher
+# gem install hiptest-publisher
 
 cd ruby
 header "Ruby"
@@ -24,9 +24,10 @@ logMessage "Installing"
 bundle install
 
 logMessage "Updating rspec tests"
-hiptest-publisher -c rspec.conf --tests-only
+hiptest-publisher -c rspec.conf --tests-only -v
 logMessage "Running rspec tests"
-bundle exec rspec
+bundle exec rspec -r rspec-extra-formatters -f TapFormatter > results.tap
+curl -X POST -F file=@results.tap https://hiptest.net/import_test_results/364282478521524761932745460494209729632304114181996206769/tap
 
 logMessage "Updating minitest tests"
 hiptest-publisher -c minitest.conf --tests-only

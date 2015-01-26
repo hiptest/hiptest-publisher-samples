@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/sittercity/rspec_formatters
+  revision: 235ab931431c08b1f866ff36796c87b4570853af
+  specs:
+    rspec-extra-formatters (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -22,3 +28,4 @@ PLATFORMS
 DEPENDENCIES
   minitest
   rspec
+  rspec-extra-formatters!

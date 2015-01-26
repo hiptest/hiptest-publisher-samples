@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.5'
 
 gem 'rspec'
 gem 'minitest'
+gem 'rspec-extra-formatters', :git => 'https://github.com/sittercity/rspec_formatters'
