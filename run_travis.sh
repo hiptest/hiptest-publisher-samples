@@ -26,15 +26,17 @@ bundle install
 logMessage "Updating rspec tests"
 hiptest-publisher -c rspec.conf --tests-only -v
 logMessage "Running rspec tests"
-bundle exec rspec -r rspec-extra-formatters -f TapFormatter > results.tap
-hiptest-publisher -v -p results.tap -c rspec.conf
-exit
+bundle exec rspec -r rspec-extra-formatters -f TapFormatter > results_rspec.tap
+hiptest-publisher -p results_rspec.tap -c rspec.conf
 
 logMessage "Updating minitest tests"
 hiptest-publisher -c minitest.conf --tests-only
 logMessage "Running minitest tests"
-bundle exec ruby test/project_test.rb
+bundle exec ruby -Ilib test/project_test.rb - --tapy | tapout tap > results_minitest.tap
+hiptest-publisher -p results_minitest.tap -c minitest.conf
 cd -
+
+exit
 
 cd python
 header "Python"

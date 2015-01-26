@@ -7,8 +7,16 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    ansi (1.5.0)
     diff-lcs (1.2.5)
+    json (1.8.2)
+    minitap (0.5.3)
+      minitest (~> 5.0)
+      minitest-reporter-api (>= 0.0.2)
+      tapout (>= 0.3.0)
     minitest (5.3.5)
+    minitest-reporter-api (0.0.5)
+      minitest (~> 5.0)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -21,11 +29,16 @@ GEM
     rspec-mocks (3.0.1)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.0)
+    tapout (0.4.5)
+      ansi
+      json
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  minitap
   minitest
   rspec
   rspec-extra-formatters!
+  tapout
