@@ -7,7 +7,6 @@ class TestCoffeeMachineHiptestPublisherSample(unittest.TestCase):
         self.actionwords = Actionwords(self)
 
     def simple_use(self, lang, ready_message):
-        # Well, sometimes, you just get a coffee.
         self.actionwords.assert_displayed_message(message = "")
         self.actionwords.start_the_coffee_machine(lang = lang)
         self.actionwords.assert_displayed_message(message = ready_message)
@@ -16,16 +15,28 @@ class TestCoffeeMachineHiptestPublisherSample(unittest.TestCase):
         self.actionwords.shutdown_coffee_machine()
         self.actionwords.assert_displayed_message(message = "")
 
-    def test_Simple_use_english(self):
+    def test_Simple_use_english_uidee2c11cc6be74a99b299224211e99599(self):
         self.simple_use(lang = 'en', ready_message = 'Ready')
 
-    def test_Simple_use_french(self):
+    def test_Simple_use_french_uid0a4254827cf44384b65e4238522882d8(self):
         self.simple_use(lang = 'fr', ready_message = 'Pret')
 
 
 
-    def test_Water_runs_away(self):
-        # Simple scenario showing that after 50 coffees, the "Fill tank" message is displayed but it is still possible to have coffee until the tank is fully empty.
+    def test_Full_grounds_does_not_block_coffee_uidb8381c5e8daa48a182be24b62e50f03c(self):
+        self.actionwords.start_the_coffee_machine()
+        self.actionwords.take_coffees(coffee_number = 29)
+        self.actionwords.assert_displayed_message(message = "Ready")
+        self.actionwords.take_a_coffee()
+        self.actionwords.assert_coffee_served()
+        self.actionwords.assert_displayed_message(message = "Empty grounds")
+        self.actionwords.fill_water_tank()
+        self.actionwords.fill_beans()
+        self.actionwords.take_coffees(coffee_number = 20)
+        self.actionwords.assert_coffee_served()
+        self.actionwords.assert_displayed_message(message = "Empty grounds")
+
+    def test_Water_runs_away_uid8ed010823ca84a4a929a8d4885662bdc(self):
         self.actionwords.start_the_coffee_machine()
         self.actionwords.take_coffees(coffee_number = 30)
         self.actionwords.fill_beans()
@@ -45,8 +56,7 @@ class TestCoffeeMachineHiptestPublisherSample(unittest.TestCase):
         self.actionwords.empty_coffee_grounds()
         self.actionwords.assert_displayed_message(message = "Ready")
 
-    def test_Beans_run_out(self):
-        # Simple scenario showing that after 38 coffees, the message "Fill beans" is displayed but it is possible to two coffees until there is no more beans.
+    def test_Beans_run_out_uid7ffe0b44fc2e4e20b7a95274447188d3(self):
         self.actionwords.start_the_coffee_machine()
         self.actionwords.assert_displayed_message(message = "Ready")
         self.actionwords.take_coffees(coffee_number = 37)
@@ -62,17 +72,3 @@ class TestCoffeeMachineHiptestPublisherSample(unittest.TestCase):
         self.actionwords.assert_displayed_message(message = "Fill beans")
         self.actionwords.take_a_coffee()
         self.actionwords.assert_no_coffee_is_served()
-
-    def test_Full_grounds_does_not_block_coffee(self):
-        # You kept getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
-        self.actionwords.start_the_coffee_machine()
-        self.actionwords.take_coffees(coffee_number = 29)
-        self.actionwords.assert_displayed_message(message = "Ready")
-        self.actionwords.take_a_coffee()
-        self.actionwords.assert_coffee_served()
-        self.actionwords.assert_displayed_message(message = "Empty grounds")
-        self.actionwords.fill_water_tank()
-        self.actionwords.fill_beans()
-        self.actionwords.take_coffees(coffee_number = 20)
-        self.actionwords.assert_coffee_served()
-        self.actionwords.assert_displayed_message(message = "Empty grounds")

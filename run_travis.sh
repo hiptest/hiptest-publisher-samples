@@ -24,7 +24,7 @@ logMessage "Installing"
 bundle install
 
 logMessage "Updating rspec tests"
-hiptest-publisher -c rspec.conf --tests-only -v
+hiptest-publisher -c rspec.conf --tests-only
 logMessage "Running rspec tests"
 bundle exec rspec -r rspec-extra-formatters -f TapFormatter > results_rspec.tap
 hiptest-publisher -p results_rspec.tap -c rspec.conf
@@ -36,8 +36,6 @@ bundle exec ruby -Ilib test/project_test.rb - --tapy | tapout tap > results_mini
 hiptest-publisher -p results_minitest.tap -c minitest.conf
 cd -
 
-exit
-
 cd python
 header "Python"
 
@@ -47,9 +45,11 @@ bin/buildout
 logMessage "Updating tests"
 hiptest-publisher -c unittest.conf --tests-only
 logMessage "Running tests"
-bin/test
+bin/test --with-tap
+hiptest-publisher -p TestCoffeeMachineHiptestPublisherSample.tap -c unittest.conf
 
 cd -
+exit
 
 cd java-junit
 header "Java / JUnit"
