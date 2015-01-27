@@ -49,7 +49,6 @@ bin/test --with-tap
 hiptest-publisher -p TestCoffeeMachineHiptestPublisherSample.tap -c unittest.conf
 
 cd -
-exit
 
 cd java-junit
 header "Java / JUnit"
@@ -58,6 +57,7 @@ logMessage "Updating tests"
 hiptest-publisher -c junit.config --tests-only
 logMessage "Packaging and running tests"
 mvn package
+hiptest-publisher -p target/surefire-reports/TEST-com.coffeemachine.ProjectTest.xml --push-format=junit -c junit.config
 
 cd -
 
@@ -68,7 +68,7 @@ logMessage "Updating tests"
 hiptest-publisher -c testng.config --tests-only
 logMessage "Packaging and running tests"
 mvn package
-
+hiptest-publisher -p target/surefire-reports/junitreports/TEST-com.testng.coffeemachine.ProjectTest.xml --push-format=junit -c testng.config
 cd -
 
 

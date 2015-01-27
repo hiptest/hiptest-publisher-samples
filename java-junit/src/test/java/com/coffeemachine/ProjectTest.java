@@ -15,17 +15,31 @@ public class ProjectTest extends TestCase {
         actionwords.assertDisplayedMessage("");
     }
 
-    public void testSimpleUseEnglish() {
+    public void testSimpleUseEnglishUid72159d85483d4de6b34cf72d99e2501f() {
       simpleUse("en", "Ready");
     }
 
-    public void testSimpleUseFrench() {
+    public void testSimpleUseFrenchUid7ef427bad71a4685af0d512a32ad3dc0() {
       simpleUse("fr", "Pret");
     }
 
 
-    // Simple scenario showing that after 50 coffees, the "Fill tank" message is displayed but it is still possible to have coffee until the tank is fully empty.
-    public void testWaterRunsAway() {
+
+    public void testFullGroundsDoesNotBlockCoffeeUidf18f2e0d3bd44a10ac8536713305773c() {
+        actionwords.startTheCoffeeMachine();
+        actionwords.takeCoffees(29);
+        actionwords.assertDisplayedMessage("Ready");
+        actionwords.takeACoffee();
+        actionwords.assertCoffeeServed();
+        actionwords.assertDisplayedMessage("Empty grounds");
+        actionwords.fillWaterTank();
+        actionwords.fillBeans();
+        actionwords.takeCoffees(20);
+        actionwords.assertCoffeeServed();
+        actionwords.assertDisplayedMessage("Empty grounds");
+    }
+
+    public void testWaterRunsAwayUidfdf9a09710604b619e5312ef147339e5() {
         actionwords.startTheCoffeeMachine();
         actionwords.takeCoffees(30);
         actionwords.fillBeans();
@@ -45,8 +59,8 @@ public class ProjectTest extends TestCase {
         actionwords.emptyCoffeeGrounds();
         actionwords.assertDisplayedMessage("Ready");
     }
-    // Simple scenario showing that after 38 coffees, the message "Fill beans" is displayed but it is possible to two coffees until there is no more beans.
-    public void testBeansRunOut() {
+
+    public void testBeansRunOutUid6974201f5e554eeaa0ee69c1955a95f5() {
         actionwords.startTheCoffeeMachine();
         actionwords.assertDisplayedMessage("Ready");
         actionwords.takeCoffees(37);
@@ -62,19 +76,5 @@ public class ProjectTest extends TestCase {
         actionwords.assertDisplayedMessage("Fill beans");
         actionwords.takeACoffee();
         actionwords.assertNoCoffeeIsServed();
-    }
-    // You kept getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
-    public void testFullGroundsDoesNotBlockCoffee() {
-        actionwords.startTheCoffeeMachine();
-        actionwords.takeCoffees(29);
-        actionwords.assertDisplayedMessage("Ready");
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Empty grounds");
-        actionwords.fillWaterTank();
-        actionwords.fillBeans();
-        actionwords.takeCoffees(20);
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Empty grounds");
     }
 }

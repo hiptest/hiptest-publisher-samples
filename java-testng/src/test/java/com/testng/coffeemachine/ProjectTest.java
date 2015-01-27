@@ -10,7 +10,6 @@ public class ProjectTest {
     public void setUp() {
         actionwords = new Actionwords();
     }
-
     public void simpleUse(String lang, String readyMessage) {
         actionwords.assertDisplayedMessage("");
         actionwords.startTheCoffeeMachine(lang);
@@ -22,19 +21,34 @@ public class ProjectTest {
     }
 
     @Test
-    public void simpleUseEnglish() {
+    public void simpleUseEnglishUid858d270d51854e2b82ba5ddfe219fe42() {
       simpleUse("en", "Ready");
     }
 
     @Test
-    public void simpleUseFrench() {
+    public void simpleUseFrenchUid373898f68647419d80deea6c3ccfb894() {
       simpleUse("fr", "Pret");
     }
 
 
-    // Simple scenario showing that after 50 coffees, the "Fill tank" message is displayed but it is still possible to have coffee until the tank is fully empty.
+
     @Test
-    public void waterRunsAway() {
+    public void fullGroundsDoesNotBlockCoffeeUide06952a328e34918899bb408596cac6c() {
+        actionwords.startTheCoffeeMachine();
+        actionwords.takeCoffees(29);
+        actionwords.assertDisplayedMessage("Ready");
+        actionwords.takeACoffee();
+        actionwords.assertCoffeeServed();
+        actionwords.assertDisplayedMessage("Empty grounds");
+        actionwords.fillWaterTank();
+        actionwords.fillBeans();
+        actionwords.takeCoffees(20);
+        actionwords.assertCoffeeServed();
+        actionwords.assertDisplayedMessage("Empty grounds");
+    }
+
+    @Test
+    public void waterRunsAwayUid1cae567daeb34449b10c3457fbcf2661() {
         actionwords.startTheCoffeeMachine();
         actionwords.takeCoffees(30);
         actionwords.fillBeans();
@@ -54,9 +68,9 @@ public class ProjectTest {
         actionwords.emptyCoffeeGrounds();
         actionwords.assertDisplayedMessage("Ready");
     }
-    // Simple scenario showing that after 38 coffees, the message "Fill beans" is displayed but it is possible to two coffees until there is no more beans.
+
     @Test
-    public void beansRunOut() {
+    public void beansRunOutUid186d320e413b4ac697b47860ece64da9() {
         actionwords.startTheCoffeeMachine();
         actionwords.assertDisplayedMessage("Ready");
         actionwords.takeCoffees(37);
@@ -72,20 +86,5 @@ public class ProjectTest {
         actionwords.assertDisplayedMessage("Fill beans");
         actionwords.takeACoffee();
         actionwords.assertNoCoffeeIsServed();
-    }
-    // You kept getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
-    @Test
-    public void fullGroundsDoesNotBlockCoffee() {
-        actionwords.startTheCoffeeMachine();
-        actionwords.takeCoffees(29);
-        actionwords.assertDisplayedMessage("Ready");
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Empty grounds");
-        actionwords.fillWaterTank();
-        actionwords.fillBeans();
-        actionwords.takeCoffees(20);
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Empty grounds");
     }
 }
