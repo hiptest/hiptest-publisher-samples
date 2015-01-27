@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation
-...  Simple scenario showing that after 50 coffees, the "Fill tank" message is displayed but it is still possible to have coffee until the tank is fully empty.
+
 
 Resource          keywords.txt
 
 
 *** Test Cases ***
 
-water_runs_away
+water_runs_away_uid1a2953e244e2405696b2fa2c4417ac0e
 	start_the_coffee_machine
 	take_coffees	30
 	fill_beans

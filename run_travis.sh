@@ -71,7 +71,6 @@ mvn package
 hiptest-publisher -p target/surefire-reports/junitreports/TEST-com.testng.coffeemachine.ProjectTest.xml --push-format=junit -c testng.config
 cd -
 
-
 cd robotframework
 header "Robot framework"
 
@@ -83,7 +82,7 @@ hiptest-publisher -c robotframework.conf --split-scenarios --test-only
 
 logMessage "Running tests"
 pybot -P src:tests tests/test_*
-
+hiptest-publisher -p output.xml --push-format=robot -c robotframework.conf
 cd -
 
 cd javascript

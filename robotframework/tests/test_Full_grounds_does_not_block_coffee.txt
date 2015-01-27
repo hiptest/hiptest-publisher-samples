@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation
-...  You kept getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
+
 
 Resource          keywords.txt
 
 
 *** Test Cases ***
 
-full_grounds_does_not_block_coffee
+full_grounds_does_not_block_coffee_uid76ce078362144fe79c8c0ac5bbf714ac
 	start_the_coffee_machine
 	take_coffees	29
 	assert_displayed_message	Ready

@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation
-...  Simple scenario showing that after 38 coffees, the message "Fill beans" is displayed but it is possible to two coffees until there is no more beans.
+
 
 Resource          keywords.txt
 
 
 *** Test Cases ***
 
-beans_run_out
+beans_run_out_uida93e0e9f8cb54a0b9fae77a6d8273fba
 	start_the_coffee_machine
 	assert_displayed_message	Ready
 	take_coffees	37

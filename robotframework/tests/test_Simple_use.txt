@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation
-...  Well, sometimes, you just get a coffee.
+
 
 Resource          keywords.txt
 
@@ -8,8 +8,8 @@ Resource          keywords.txt
 Test Template     simple_use
 
 *** Test Cases ***	lang	ready_message
-English	en	Ready
-French	fr	Pret
+English (uid:92f4d3f5-ab1a-4c48-ae9d-d7c18a0d365e)	en	Ready
+French (uid:bc781bee-05c4-41c2-83c0-aaebb3d2d1a1)	fr	Pret
 
 
 *** Keywords ***
