@@ -15,7 +15,7 @@ logMessage() {
   echo "-------------------------------------------------------------------------------"
 }
 
-# gem install hiptest-publisher
+gem install hiptest-publisher
 
 cd ruby
 header "Ruby"
