@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set +e
 
 header() {
   local msg=$1
