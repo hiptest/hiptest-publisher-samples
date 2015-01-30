@@ -14,7 +14,7 @@ logMessage() {
   echo "-------------------------------------------------------------------------------"
 }
 
-# gem install hiptest-publisher
+gem install hiptest-publisher
 
 for dir in */; do
   cd $dir
