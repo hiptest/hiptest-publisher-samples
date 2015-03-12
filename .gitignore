@@ -2,6 +2,7 @@
 
 java-*/target/
 javascript/node_modules/
+javascript/_build/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
