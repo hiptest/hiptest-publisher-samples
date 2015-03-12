@@ -31,7 +31,6 @@ function CoffeeMachine () {
   instance.set = function (name, value) {
     instance.attributes['_' + name] = value;
     instance.triggerListeners(name);
-    console.log('Setting ' + name + ' to ' + value);
   }
 
   instance.get = function (name) {
