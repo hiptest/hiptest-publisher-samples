@@ -1,5 +1,5 @@
 export hiptest_config=qunit.conf
-export results=results.xml
+export results=_build/test-reports/TEST-index.xml
 
 setup() {
   npm install
