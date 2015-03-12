@@ -6,9 +6,5 @@
     "grunt-contrib-jasmine": "^0.8.2",
     "grunt-contrib-qunit": "^0.5.1",
     "grunt-qunit-junit": "^0.3.0"
-  },
-  "scripts": {
-    "test_qunit": "grunt qunit_junit qunit --verbose",
-    "test_jasmine": "grunt jasmine"
   }
 }

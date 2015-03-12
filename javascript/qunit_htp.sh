@@ -6,5 +6,5 @@ setup() {
 }
 
 run_tests() {
-  npm test_qunit
+  grunt qunit_junit qunit --verbose
 }
