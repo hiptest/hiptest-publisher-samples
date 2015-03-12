@@ -2,25 +2,26 @@
   module('Coffee machine - Hiptest publisher sample', {
     setup: function () {
       this.actionwords = Object.create(Actionwords);
+      this.actionwords.sut = CoffeeMachine();
     }
   });
 
-  function simpleUse (aws, lang, ready_message) {
-    aws.assertDisplayedMessage();
-    aws.startTheCoffeeMachine(lang);
-    aws.assertDisplayedMessage(ready_message);
-    aws.takeACoffee();
-    aws.assertCoffeeServed();
-    aws.shutdownCoffeeMachine();
-    aws.assertDisplayedMessage();
+  function simpleUse (lang, ready_message) {
+    this.actionwords.assertDisplayedMessage();
+    this.actionwords.startTheCoffeeMachine(lang);
+    this.actionwords.assertDisplayedMessage(ready_message);
+    this.actionwords.takeACoffee();
+    this.actionwords.assertCoffeeServed();
+    this.actionwords.shutdownCoffeeMachine();
+    this.actionwords.assertDisplayedMessage();
   }
 
   test('Simple use: English (uid:6617621c-6e93-4b66-9b48-cda962025bfc)', function () {
-    simpleUse(this.actionwords, 'en', 'Ready');
+    simpleUse.apply(this, ['en', 'Ready']);
   });
 
   test('Simple use: French (uid:597940b5-9739-4f52-bc15-0a8f2d09921b)', function () {
-    simpleUse(this.actionwords, 'fr', 'Pret');
+    simpleUse.apply(this, ['fr', 'Pret']);
   });
 
 

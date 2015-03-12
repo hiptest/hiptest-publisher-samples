@@ -1,0 +1,6 @@
+module('{{{ remove_quotes project_name }}}', {{#curly}}
+  setup: function () {{#curly}}
+    this.actionwords = Object.create(Actionwords);
+    this.actionwords.sut = CoffeeMachine();
+  {{/curly}}
+{{/curly}});

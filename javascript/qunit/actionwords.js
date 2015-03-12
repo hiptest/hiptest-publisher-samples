@@ -2,7 +2,7 @@ var Actionwords = {
   sut:  CoffeeMachine(),
 
   assertNoCoffeeIsServed: function () {
-    equal(sut.get('coffeeServed'), false);
+    equal(this.sut.get('coffeeServed'), false);
   },
   fillWaterTank: function () {
     this.sut.fillTank()
@@ -33,6 +33,6 @@ var Actionwords = {
     this.sut.start(lang);
   },
   assertDisplayedMessage: function (message) {
-    equal(message, this.sut.get('message'));
+    equal(this.sut.get('message'), message || "");
   }
 }
