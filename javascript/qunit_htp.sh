@@ -6,5 +6,5 @@ setup() {
 }
 
 run_tests() {
-  npm test
+  npm test_qunit
 }
