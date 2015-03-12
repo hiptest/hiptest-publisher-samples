@@ -1,6 +1,6 @@
 var Actionwords = {
   assertNoCoffeeIsServed: function () {
-    equal(this.sut.get('coffeeServed'), false);
+    expect(this.sut.get('coffeeServed')).toBeFalsy();
   },
   fillWaterTank: function () {
     this.sut.fillTank();
@@ -25,12 +25,12 @@ var Actionwords = {
     this.sut.takeCoffee();
   },
   assertCoffeeServed: function () {
-    equal(this.sut.get('coffeeServed'), true);
+    expect(this.sut.get('coffeeServed')).toBeTruthy();
   },
   startTheCoffeeMachine: function (lang) {
     this.sut.start(lang);
   },
   assertDisplayedMessage: function (message) {
-    equal(this.sut.get('message'), message || "");
+    expect(this.sut.get('message')).toEqual(message || "");
   }
 }
