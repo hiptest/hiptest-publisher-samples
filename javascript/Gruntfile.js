@@ -15,7 +15,11 @@ module.exports = function(grunt) {
     jasmine: {
       src: ['src/coffee_machine.js', 'jasmine/actionwords.js'],
       options: {
-        specs: ['jasmine/project_test.js']
+        specs: ['jasmine/project_test.js'],
+        junit: {
+          path: '_build/test-reports/jasmine',
+          consolidate: true
+        }
       }
     }
   });
