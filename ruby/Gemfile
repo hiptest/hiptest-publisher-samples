@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.2.2'
 
+gem 'pry'
+gem 'cucumber'
 gem 'rspec'
 gem 'minitest'
 gem 'rspec-extra-formatters', :git => 'https://github.com/sittercity/rspec_formatters'
 gem 'tapout'
+gem 'test-unit'
 gem 'minitap'

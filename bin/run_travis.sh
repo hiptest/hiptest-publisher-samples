@@ -1,5 +1,5 @@
 #!/bin/bash
-set +e
+set -e
 
 header() {
   echo "==============================================================================="
@@ -43,17 +43,18 @@ updateAndRunTests() {
   setup
 
   logMessage "Updating tests"
-  hiptest-publisher -c $hiptest_config --tests-only
+  hiptest-publisher -v -c $hiptest_config --tests-only
 
   logMessage "Running tests"
   run_tests
 
-  logMessage "Pushing results to Hiptest"
-  hiptest-publisher -p $results -c $hiptest_config
+  #logMessage "Pushing results to Hiptest"
+  # hiptest-publisher -p $results -c $hiptest_config
 }
 
 installHiptestPublisher() {
-  gem install hiptest-publisher
+  #gem install hiptest-publisher
+  true
 }
 
 show_help() {
