@@ -23,6 +23,7 @@ Each supported language by Hiptest publisher has some examples:
 
  - [Python](https://github.com/hiptest/hiptest-publisher-samples/blob/master/python/README.md)
  - [Ruby](https://github.com/hiptest/hiptest-publisher-samples/blob/master/ruby/README.md)
+ - [Cucumber](https://github.com/hiptest/hiptest-publisher-samples/blob/master/javascript/cucumber/README.md#cucumber)
  - Java: [JUnit](https://github.com/hiptest/hiptest-publisher-samples/blob/master/java-junit/README.md) / [Test Ng](https://github.com/hiptest/hiptest-publisher-samples/blob/master/java-testng/README.md)
  - [Robot framework](https://github.com/hiptest/hiptest-publisher-samples/blob/master/robotframework/README.md)
  - [Selenium IDE](https://github.com/hiptest/hiptest-publisher-samples/blob/master/javascript/selenium-ide/README.md)
