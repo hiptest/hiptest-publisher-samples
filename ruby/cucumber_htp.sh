@@ -6,6 +6,5 @@ setup() {
 }
 
 run_tests() {
-  bundle exec cucumber cukes
-  touch $result # no result file for cucumber for the moment...
+  bundle exec cucumber cukes --format Hiptest::TapFormatter --out $results --format pretty
 }
