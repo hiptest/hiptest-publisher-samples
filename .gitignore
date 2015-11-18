@@ -61,3 +61,7 @@ docs/_build/
 robotframework/log.html
 robotframework/output.xml
 robotframework/report.html
+
+csharp/TestResult.xml
+csharp/hiptest.publisher.samples.dll
+
