@@ -1,12 +1,16 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <None Include="features/Scenarios.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Scenarios.feature.cs</LastGenOutput>
-    </None>
     <None Include="features/Error_messages.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Error_messages.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features/Nominal_case.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Nominal_case.feature.cs</LastGenOutput>
+    </None>
+    <None Include="features/Weird_specs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Weird_specs.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
 </Project>

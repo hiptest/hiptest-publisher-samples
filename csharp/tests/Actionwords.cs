@@ -4,47 +4,67 @@ namespace Hiptest.Publisher.Samples {
     public class Actionwords {
         CoffeeMachine Sut = new CoffeeMachine();
 
-        public void StartTheCoffeeMachine(string lang = "en") {
+        public void IStartTheCoffeeMachine(string lang = "en") {
             Sut.Start(lang);
         }
 
-        public void ShutdownCoffeeMachine() {
+        public void IShutdownTheCoffeeMachine() {
             Sut.Stop();
         }
 
-        public void AssertDisplayedMessage(string message = "") {
+        public void MessageMessageShouldBeDisplayed(string message = "") {
             Assert.AreEqual(message, Sut.Message);
         }
 
-        public void AssertCoffeeServed() {
+        public void CoffeeShouldBeServed() {
             Assert.IsTrue(Sut.CoffeeServed);
         }
 
-        public void AssertNoCoffeeIsServed() {
+        public void CoffeeShouldNotBeServed() {
             Assert.IsFalse(Sut.CoffeeServed);
         }
 
-        public void TakeACoffee() {
+        public void ITakeACoffee() {
             Sut.TakeCoffee();
         }
 
-        public void EmptyCoffeeGrounds() {
+        public void IEmptyTheCoffeeGrounds() {
             Sut.EmptyGrounds();
         }
 
-        public void FillBeans() {
+        public void IFillTheBeansTank() {
             Sut.FillBeans();
         }
 
-        public void FillWaterTank() {
+        public void IFillTheWaterTank() {
             Sut.FillTank();
         }
 
-        public void TakeCoffees(int coffeeNumber) {
+        public void ITakeCoffeeNumberCoffees(int coffeeNumber) {
             while ((coffeeNumber > 0)) {
-                this.TakeACoffee();
+                ITakeACoffee();
                 coffeeNumber = coffeeNumber - 1;
             }
+        }
+
+        public void TheCoffeeMachineIsStarted() {
+            IStartTheCoffeeMachine();
+        }
+
+        public void FiftyCoffeesHaveBeenTakenWithoutFillingTheTank() {
+            ITakeCoffeeNumberCoffees(30);
+            IFillTheBeansTank();
+            IEmptyTheCoffeeGrounds();
+            ITakeCoffeeNumberCoffees(20);
+            IFillTheBeansTank();
+            IEmptyTheCoffeeGrounds();
+        }
+
+        public void ThirtyEightCoffeesAreTakenWithoutFillingBeans() {
+            ITakeCoffeeNumberCoffees(37);
+            IEmptyTheCoffeeGrounds();
+            IFillTheWaterTank();
+            ITakeACoffee();
         }
     }
 }

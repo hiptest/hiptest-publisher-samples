@@ -1,39 +1,27 @@
 Feature: Error messages
+        As a coffee lover
+        I would like to have a coffee
+        But the machine is bothering me with errors messages
 
+    Scenario: Water runs away (uid:9cf850d1-b76f-4b70-a881-5af6c572fe8a)
+        Given the coffee machine is started
+        When fifty coffees have been taken without filling the tank
+        Then message "Fill tank" should be displayed
+        When I take a coffee
+        Then coffee should be served
+        When I take "10" coffees
+        Then coffee should not be served
+        And message "Fill tank" should be displayed
+        When I fill the water tank
+        Then message "Ready" should be displayed
 
-    Scenario: Water runs away (uid:ae4016f6-9b4d-4ad7-aeba-32f710a9b6ab)
-        * Start the coffee machine "en"
-        * Take coffees "30"
-        * Fill beans
-        * Empty coffee grounds
-        * Take coffees "20"
-        * Fill beans
-        * Empty coffee grounds
-        * Assert displayed message "Fill tank"
-        * Fill beans
-        * Take a coffee
-        * Assert coffee served
-        * Take coffees "9"
-        * Take a coffee
-        * Assert no coffee is served
-        * Assert displayed message "Fill tank"
-        * Fill water tank
-        * Empty coffee grounds
-        * Assert displayed message "Ready"
-
-    Scenario: Beans run out (uid:f92ba764-a84d-4779-b8ab-585148497b89)
-        * Start the coffee machine "en"
-        * Assert displayed message "Ready"
-        * Take coffees "37"
-        * Empty coffee grounds
-        * Fill water tank
-        * Assert displayed message "Ready"
-        * Take a coffee
-        * Assert coffee served
-        * Assert displayed message "Fill beans"
-        * Take a coffee
-        * Take a coffee
-        * Assert coffee served
-        * Assert displayed message "Fill beans"
-        * Take a coffee
-        * Assert no coffee is served
+    Scenario: Beans run out (uid:bc6a5fe9-6a6c-448a-a8f7-68515a1020ee)
+        Given the coffee machine is started
+        When thirty eight coffees are taken without filling beans
+        Then coffee should be served
+        And message "Fill beans" should be displayed
+        When I take "2" coffees
+        Then coffee should be served
+        And message "Fill beans" should be displayed
+        When I take a coffee
+        Then coffee should not be served
