@@ -65,3 +65,6 @@ robotframework/report.html
 csharp/TestResult.xml
 csharp/hiptest.publisher.samples.dll
 
+specflow/SpecFlow_v1.9.0_bin
+specflow/features/*.feature.cs
+
