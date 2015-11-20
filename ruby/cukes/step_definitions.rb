@@ -3,42 +3,54 @@
 require_relative 'actionwords'
 World(Actionwords)
 
-Given /^Assert no coffee is served$/ do
-  assert_no_coffee_is_served
+Given /^I start the coffee machine "(.*)"$/ do |lang|
+  i_start_the_coffee_machine(lang)
 end
 
-Given /^Fill water tank$/ do
-  fill_water_tank
+When /^I shutdown the coffee machine$/ do
+  i_shutdown_the_coffee_machine
 end
 
-Given /^Empty coffee grounds$/ do
-  empty_coffee_grounds
+Then /^message "(.*)" should be displayed$/ do |message|
+  message_message_should_be_displayed(message)
 end
 
-Given /^Fill beans$/ do
-  fill_beans
+Then /^coffee should be served$/ do
+  coffee_should_be_served
 end
 
-Given /^Shutdown coffee machine$/ do
-  shutdown_coffee_machine
+Then /^coffee should not be served$/ do
+  coffee_should_not_be_served
 end
 
-Given /^Take coffees "(.*)"$/ do |coffee_number|
-  take_coffees(coffee_number)
+When /^I take a coffee$/ do
+  i_take_a_coffee
 end
 
-Given /^Take a coffee$/ do
-  take_a_coffee
+Given /^I empty the coffee grounds$/ do
+  i_empty_the_coffee_grounds
 end
 
-Given /^Assert coffee served$/ do
-  assert_coffee_served
+And /^I fill the beans tank$/ do
+  i_fill_the_beans_tank
 end
 
-Given /^Start the coffee machine "(.*)"$/ do |lang|
-  start_the_coffee_machine(lang)
+When /^I fill the water tank$/ do
+  i_fill_the_water_tank
 end
 
-Given /^Assert displayed message "(.*)"$/ do |message|
-  assert_displayed_message(message)
+When /^I take "(.*)" coffees$/ do |coffee_number|
+  i_take_coffee_number_coffees(coffee_number)
+end
+
+Given /^the coffee machine is started$/ do
+  the_coffee_machine_is_started
+end
+
+When /^fifty coffees have been taken without filling the tank$/ do
+  fifty_coffees_have_been_taken_without_filling_the_tank
+end
+
+When /^thirty eight coffees are taken without filling beans$/ do
+  thirty_eight_coffees_are_taken_without_filling_beans
 end
