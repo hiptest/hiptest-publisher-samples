@@ -66,5 +66,9 @@ csharp/TestResult.xml
 csharp/hiptest.publisher.samples.dll
 
 specflow/SpecFlow.1.9.0
+specflow/NUnit.2.6.4/
+specflow/NUnit.Runners.2.6.4/
+specflow/hiptest.publisher.samples.dll
 specflow/features/*.feature.cs
+*.exe
 

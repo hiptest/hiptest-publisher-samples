@@ -1,4 +1,22 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Compile">
+  <Target Name="Compile">
+    <Csc Sources="@(Compile)" References="@(Reference)" TargetType="Library" />
+  </Target>
+  <Target Name="BuildNUnitFiles">
+    <Exec Command="mono SpecFlow.1.9.0/tools/specflow.exe generateall specflow_samples.csproj" />
+  </Target>
+  <Target Name="Test" DependsOnTargets="BuildNUnitFiles;Compile">
+    <Exec Command="mono NUnit.Runners.2.6.4/tools/nunit-console.exe specflow_samples.csproj" />
+  </Target>
+  <ItemGroup>
+    <Reference Include="NUnit.2.6.4/lib/nunit.framework.dll" />
+    <Reference Include="SpecFlow.1.9.0/tools/TechTalk.SpecFlow.dll" />
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="../csharp/class/CoffeeMachine.cs" />
+     <Compile Include="features/Actionwords.cs" />
+     <Compile Include="features/*.feature.cs" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="features/Error_messages.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
