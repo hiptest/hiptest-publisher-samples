@@ -15,7 +15,6 @@ __pycache__/
 .Python
 env/
 python/bin/
-build/
 develop-eggs/
 dist/
 eggs/
@@ -62,13 +61,19 @@ robotframework/log.html
 robotframework/output.xml
 robotframework/report.html
 
+*/SpecFlow.1.9.0
+*/NUnit.2.6.4
+*/NUnit.Runners.2.6.4
+
+hiptest.publisher.samples.dll
+
 csharp/TestResult.xml
-csharp/hiptest.publisher.samples.dll
+csharp/obj
 
-specflow/SpecFlow.1.9.0
-specflow/NUnit.2.6.4/
-specflow/NUnit.Runners.2.6.4/
-specflow/hiptest.publisher.samples.dll
 specflow/features/*.feature.cs
-*.exe
+specflow/obj
+specflow/TestResult.xml
 
+*.exe
+*.dll
+*.dll.mdb

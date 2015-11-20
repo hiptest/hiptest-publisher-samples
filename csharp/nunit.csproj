@@ -30,12 +30,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="NUnit.2.6.4/lib/nunit.framework.dll" />
-    <Reference Include="SpecFlow.1.9.0/tools/TechTalk.SpecFlow.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="class/CoffeeMachine.cs" />
-    <Compile Include="features/Actionwords.cs" />
-    <Compile Include="features/*.feature.cs" />
+    <Compile Include="tests/Actionwords.cs" />
+    <Compile Include="tests/ProjectTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -44,11 +43,7 @@
   <Target Name="Compile">
     <Csc Sources="@(Compile)" References="@(Reference)" TargetType="Library" OutputAssembly="build/hiptest.publisher.samples.dll" />
   </Target>
-  <Target Name="BuildNUnitFiles">
-    <Exec Command="mono SpecFlow.1.9.0/tools/specflow.exe generateall specflow_samples.csproj" />
-  </Target>
-  <Target Name="Test" DependsOnTargets="BuildNUnitFiles;Compile">
-    <Exec Command="mono NUnit.Runners.2.6.4/tools/nunit-console.exe specflow_samples.csproj" />
+  <Target Name="Test" DependsOnTargets="Compile">
+    <Exec Command="mono NUnit.Runners.2.6.4/tools/nunit-console.exe nunit.csproj" />
   </Target>
 </Project>
-

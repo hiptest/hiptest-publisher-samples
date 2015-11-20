@@ -1,7 +1,11 @@
 export hiptest_config=nunit.conf
 export results=TestResult.xml
 
+setup() {
+  nuget install NUnit -Version 2.6.4
+  nuget install NUnit.Runners -Version 2.6.4
+}
+
 run_tests() {
-  mcs /target:library /out:hiptest.publisher.samples.dll class/CoffeeMachine.cs tests/Actionwords.cs tests/ProjectTest.cs -reference:nunit.framework.dll
-  nunit-console hiptest.publisher.samples.dll
+  xbuild nunit.csproj /t:test
 }
