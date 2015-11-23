@@ -1,3 +1,4 @@
 language: csharp
 rvm: 2.2.2
 script: "bin/run_travis.sh"
+sudo: false
