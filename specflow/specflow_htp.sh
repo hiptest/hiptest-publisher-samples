@@ -1,4 +1,4 @@
-export hiptest_config=nunit.conf
+export hiptest_config=specflow.conf
 export results=TestResult.xml
 
 setup() {
