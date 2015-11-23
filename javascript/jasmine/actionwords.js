@@ -1,36 +1,65 @@
 var Actionwords = {
-  assertNoCoffeeIsServed: function () {
+  coffeeShouldNotBeServed: function () {
     expect(this.sut.get('coffeeServed')).toBeFalsy();
   },
-  fillWaterTank: function () {
+
+  iFillTheWaterTank: function () {
     this.sut.fillTank();
   },
-  emptyCoffeeGrounds: function () {
+
+  iEmptyTheCoffeeGrounds: function () {
     this.sut.emptyGrounds();
   },
-  fillBeans: function () {
+
+  iFillTheBeansTank: function () {
     this.sut.fillBeans();
   },
-  shutdownCoffeeMachine: function () {
+
+  iShutdownTheCoffeeMachine: function () {
     this.sut.stop();
 
   },
-  takeCoffees: function (coffee_number) {
+
+  iTakeCoffeeNumberCoffees: function (coffee_number) {
     while ((coffee_number > 0)) {
-      this.takeACoffee();
+      this.iTakeACoffee();
       coffee_number = coffee_number - 1;
     }
   },
-  takeACoffee: function () {
+
+  iTakeACoffee: function () {
     this.sut.takeCoffee();
   },
-  assertCoffeeServed: function () {
+
+  coffeeShouldBeServed: function () {
     expect(this.sut.get('coffeeServed')).toBeTruthy();
   },
-  startTheCoffeeMachine: function (lang) {
+
+  iStartTheCoffeeMachine: function (lang) {
     this.sut.start(lang);
   },
-  assertDisplayedMessage: function (message) {
+
+  messageMessageShouldBeDisplayed: function (message) {
     expect(this.sut.get('message')).toEqual(message || "");
+  },
+
+  theCoffeeMachineIsStarted: function () {
+    this.iStartTheCoffeeMachine();
+  },
+
+  fiftyCoffeesHaveBeenTakenWithoutFillingTheTank: function () {
+    this.iTakeCoffeeNumberCoffees(30);
+    this.iFillTheBeansTank();
+    this.iEmptyTheCoffeeGrounds();
+    this.iTakeCoffeeNumberCoffees(20);
+    this.iFillTheBeansTank();
+    this.iEmptyTheCoffeeGrounds();
+  },
+
+  thirtyEightCoffeesAreTakenWithoutFillingBeans: function () {
+    this.iTakeCoffeeNumberCoffees(37);
+    this.iEmptyTheCoffeeGrounds();
+    this.iFillTheWaterTank();
+    this.iTakeACoffee();
   }
 }
