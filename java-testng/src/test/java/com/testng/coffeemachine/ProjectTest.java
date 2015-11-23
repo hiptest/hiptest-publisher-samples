@@ -11,13 +11,12 @@ public class ProjectTest {
         actionwords = new Actionwords();
     }
     public void simpleUse(String lang, String readyMessage) {
-        actionwords.assertDisplayedMessage("");
-        actionwords.startTheCoffeeMachine(lang);
-        actionwords.assertDisplayedMessage(readyMessage);
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.shutdownCoffeeMachine();
-        actionwords.assertDisplayedMessage("");
+        // Given I start the coffee machine "<lang>"
+        actionwords.iStartTheCoffeeMachine(lang);
+        // When I take a coffee
+        actionwords.iTakeACoffee();
+        // Then coffee should be served
+        actionwords.coffeeShouldBeServed();
     }
 
     @Test
@@ -34,57 +33,99 @@ public class ProjectTest {
 
     @Test
     public void fullGroundsDoesNotBlockCoffeeUide06952a328e34918899bb408596cac6c() {
-        actionwords.startTheCoffeeMachine();
-        actionwords.takeCoffees(29);
-        actionwords.assertDisplayedMessage("Ready");
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Empty grounds");
-        actionwords.fillWaterTank();
-        actionwords.fillBeans();
-        actionwords.takeCoffees(20);
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Empty grounds");
+        // Given the coffee machine is started
+        actionwords.theCoffeeMachineIsStarted();
+        // When I take "29" coffees
+        actionwords.iTakeCoffeeNumberCoffees(29);
+        // Then message "Ready" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Ready");
+        // When I take a coffee
+        actionwords.iTakeACoffee();
+        // Then coffee should be served
+        actionwords.coffeeShouldBeServed();
+        // And message "Empty grounds" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Empty grounds");
+        // When I fill the water tank
+        actionwords.iFillTheWaterTank();
+        // And I fill the beans tank
+        actionwords.iFillTheBeansTank();
+        // And I take "20" coffees
+        actionwords.iTakeCoffeeNumberCoffees(20);
+        // Then coffee should be served
+        actionwords.coffeeShouldBeServed();
+        // And message "Empty grounds" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Empty grounds");
     }
 
     @Test
     public void waterRunsAwayUid1cae567daeb34449b10c3457fbcf2661() {
-        actionwords.startTheCoffeeMachine();
-        actionwords.takeCoffees(30);
-        actionwords.fillBeans();
-        actionwords.emptyCoffeeGrounds();
-        actionwords.takeCoffees(20);
-        actionwords.fillBeans();
-        actionwords.emptyCoffeeGrounds();
-        actionwords.assertDisplayedMessage("Fill tank");
-        actionwords.fillBeans();
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.takeCoffees(9);
-        actionwords.takeACoffee();
-        actionwords.assertNoCoffeeIsServed();
-        actionwords.assertDisplayedMessage("Fill tank");
-        actionwords.fillWaterTank();
-        actionwords.emptyCoffeeGrounds();
-        actionwords.assertDisplayedMessage("Ready");
+        // Given the coffee machine is started
+        actionwords.theCoffeeMachineIsStarted();
+        // When fifty coffees have been taken without filling the tank
+        actionwords.fiftyCoffeesHaveBeenTakenWithoutFillingTheTank();
+        // Then message "Fill tank" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Fill tank");
+        // When I take a coffee
+        actionwords.iTakeACoffee();
+        // Then coffee should be served
+        actionwords.coffeeShouldBeServed();
+        // When I take "10" coffees
+        actionwords.iTakeCoffeeNumberCoffees(10);
+        // Then coffee should not be served
+        actionwords.coffeeShouldNotBeServed();
+        // And message "Fill tank" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Fill tank");
+        // When I fill the water tank
+        actionwords.iFillTheWaterTank();
+        // Then message "Ready" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Ready");
     }
 
     @Test
     public void beansRunOutUid186d320e413b4ac697b47860ece64da9() {
-        actionwords.startTheCoffeeMachine();
-        actionwords.assertDisplayedMessage("Ready");
-        actionwords.takeCoffees(37);
-        actionwords.emptyCoffeeGrounds();
-        actionwords.fillWaterTank();
-        actionwords.assertDisplayedMessage("Ready");
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Fill beans");
-        actionwords.takeACoffee();
-        actionwords.takeACoffee();
-        actionwords.assertCoffeeServed();
-        actionwords.assertDisplayedMessage("Fill beans");
-        actionwords.takeACoffee();
-        actionwords.assertNoCoffeeIsServed();
+        // Given the coffee machine is started
+        actionwords.theCoffeeMachineIsStarted();
+        // When thirty eight coffees are taken without filling beans
+        actionwords.thirtyEightCoffeesAreTakenWithoutFillingBeans();
+        // Then coffee should be served
+        actionwords.coffeeShouldBeServed();
+        // And message "Fill beans" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Fill beans");
+        // When I take "2" coffees
+        actionwords.iTakeCoffeeNumberCoffees(2);
+        // Then coffee should be served
+        actionwords.coffeeShouldBeServed();
+        // And message "Fill beans" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Fill beans");
+        // When I take a coffee
+        actionwords.iTakeACoffee();
+        // Then coffee should not be served
+        actionwords.coffeeShouldNotBeServed();
+    }
+
+    @Test
+    public void noMessagesAreDisplayedWhenMachineIsShutDownUid78707faf2f21450cb3acbb543192fdf4() {
+        // Given the coffee machine is started
+        actionwords.theCoffeeMachineIsStarted();
+        // When I shutdown the coffee machine
+        actionwords.iShutdownTheCoffeeMachine();
+        // Then message "" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("");
+    }
+    public void messagesAreBasedOnLanguage(String lang, String readyMessage) {
+        // When I start the coffee machine "<lang>"
+        actionwords.iStartTheCoffeeMachine(lang);
+        // Then message "<ready_message>" should be displayed
+        actionwords.messageMessageShouldBeDisplayed(readyMessage);
+    }
+
+    @Test
+    public void messagesAreBasedOnLanguageEnglishUid4575ba395fa046e69637570f4f935bc2() {
+        messagesAreBasedOnLanguage("en", "Ready");
+    }
+
+    @Test
+    public void messagesAreBasedOnLanguageFrenchUide2d71302d9064848b6e2af29c7e5117c() {
+        messagesAreBasedOnLanguage("fr", "Pret");
     }
 }

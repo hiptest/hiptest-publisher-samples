@@ -7,8 +7,12 @@ import static org.testng.Assert.assertTrue;
 public class Actionwords {
     public CoffeeMachine sut = new CoffeeMachine();
 
-    public void iStartTheCoffeeMachine(null lang) {
-        sut.start("en");
+    public void iStartTheCoffeeMachine() {
+        iStartTheCoffeeMachine("en");
+    }
+
+    public void iStartTheCoffeeMachine(String lang) {
+        sut.start(lang);
     }
 
     public void iShutdownTheCoffeeMachine() {
@@ -33,6 +37,7 @@ public class Actionwords {
 
     public void iEmptyTheCoffeeGrounds() {
         sut.emptyGrounds();
+    }
 
     public void iFillTheBeansTank() {
         sut.fillBeans();

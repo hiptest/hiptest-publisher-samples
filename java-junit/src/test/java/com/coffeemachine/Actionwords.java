@@ -1,7 +1,5 @@
 package com.coffeemachine;
 
-package com.coffeemachine;
-
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
@@ -9,8 +7,12 @@ import static junit.framework.Assert.assertTrue;
 public class Actionwords {
     public CoffeeMachine sut = new CoffeeMachine();
 
-    public void iStartTheCoffeeMachine(null lang) {
-        sut.start("en");
+    public void iStartTheCoffeeMachine() {
+        iStartTheCoffeeMachine("en");
+    }
+
+    public void iStartTheCoffeeMachine(String lang) {
+        sut.start(lang);
     }
 
     public void iShutdownTheCoffeeMachine() {
@@ -35,6 +37,7 @@ public class Actionwords {
 
     public void iEmptyTheCoffeeGrounds() {
         sut.emptyGrounds();
+    }
 
     public void iFillTheBeansTank() {
         sut.fillBeans();
