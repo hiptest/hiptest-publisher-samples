@@ -22,12 +22,12 @@ public class ProjectTest {
 
     @Test
     public void simpleUseEnglishUid858d270d51854e2b82ba5ddfe219fe42() {
-      simpleUse("en", "Ready");
+        simpleUse("en", "Ready");
     }
 
     @Test
     public void simpleUseFrenchUid373898f68647419d80deea6c3ccfb894() {
-      simpleUse("fr", "Pret");
+        simpleUse("fr", "Pret");
     }
 
 
