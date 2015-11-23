@@ -1,5 +1,9 @@
 #!/bin/bash
 set +e
+SETUP_FAILS=()
+UPDATE_FAILS=()
+RUN_FAILS=()
+
 
 header() {
   echo "==============================================================================="
@@ -12,6 +16,17 @@ logMessage() {
   echo "-------------------------------------------------------------------------------"
   echo "$*"
   echo "-------------------------------------------------------------------------------"
+}
+
+displayFailures() {
+  local name=$1[@]
+  local lst=("${!name}");
+  local msg=$2;
+
+  if ((${#lst[@]} != 0)); then
+    logMessage $msg;
+    echo $lst;
+  fi
 }
 
 seekAndRunTestsForDir() {
@@ -41,12 +56,21 @@ updateAndRunTests() {
 
   logMessage "Setting up project"
   setup
+  if (($? != 0)); then
+    SETUP_FAILS+=$src
+  fi
 
   logMessage "Updating tests"
   hiptest-publisher -c $hiptest_config --tests-only
+  if (($? != 0)); then
+    UPDATE_FAILS+=$src
+  fi
 
   logMessage "Running tests"
   run_tests
+  if (($? != 0)); then
+    RUN_FAILS+=$src
+  fi
 
   logMessage "Pushing results to Hiptest"
   hiptest-publisher -p $results -c $hiptest_config
@@ -95,4 +119,12 @@ else
   for dir in */; do
     seekAndRunTestsForDir $dir
   done
+fi
+
+displayFailures SETUP_FAILS "Setup failed for the following languages";
+displayFailures UPDATE_FAILS "Test update failed for the following languages";
+displayFailures RUN_FAILS "Tests failed for the following languages";
+
+if ((${#SETUP_FAILS[@]} + ${#UPDATE_FAILS[@]} + ${#RUN_FAILS[@]} != 0)); then
+  exit 1;
 fi
