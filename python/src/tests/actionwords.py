@@ -6,34 +6,51 @@ class Actionwords:
         self.sut = CoffeeMachine()
         self.test = test
 
-    def start_the_coffee_machine(self, lang = 'en'):
+    def i_start_the_coffee_machine(self, lang = "en"):
         self.sut.start(lang)
 
-    def shutdown_coffee_machine(self):
+    def i_shutdown_the_coffee_machine(self):
         self.sut.stop()
 
-    def assert_displayed_message(self, message):
+    def message_message_should_be_displayed(self, message):
         self.test.assertEqual(self.sut.message, message)
 
-    def assert_coffee_served(self):
+    def coffee_should_be_served(self):
         self.test.assertTrue(self.sut.coffee_served)
 
-    def assert_no_coffee_is_served(self):
+    def coffee_should_not_be_served(self):
         self.test.assertFalse(self.sut.coffee_served)
 
-    def take_a_coffee(self):
+    def i_take_a_coffee(self):
         self.sut.take_coffee()
 
-    def empty_coffee_grounds(self):
+    def i_empty_the_coffee_grounds(self):
         self.sut.empty_grounds()
 
-    def fill_beans(self):
+    def i_fill_the_beans_tank(self):
         self.sut.fill_beans()
 
-    def fill_water_tank(self):
+    def i_fill_the_water_tank(self):
         self.sut.fill_tank()
 
-    def take_coffees(self, coffee_number = 10):
+    def i_take_coffee_number_coffees(self, coffee_number = 10):
         while (coffee_number > 0):
-            self.take_a_coffee()
+            self.i_take_a_coffee()
             coffee_number = coffee_number - 1
+
+    def the_coffee_machine_is_started(self):
+        self.i_start_the_coffee_machine()
+
+    def fifty_coffees_have_been_taken_without_filling_the_tank(self):
+        self.i_take_coffee_number_coffees(coffee_number = 30)
+        self.i_fill_the_beans_tank()
+        self.i_empty_the_coffee_grounds()
+        self.i_take_coffee_number_coffees(coffee_number = 20)
+        self.i_fill_the_beans_tank()
+        self.i_empty_the_coffee_grounds()
+
+    def thirty_eight_coffees_are_taken_without_filling_beans(self):
+        self.i_take_coffee_number_coffees(coffee_number = 37)
+        self.i_empty_the_coffee_grounds()
+        self.i_fill_the_water_tank()
+        self.i_take_a_coffee()
