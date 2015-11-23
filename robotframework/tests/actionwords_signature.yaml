@@ -1,0 +1,34 @@
+---
+- name: Assert no coffee is served
+  uid: 6aa875cd-0f6f-4c67-8130-e58fede3a2f7
+  parameters: []
+- name: Fill water tank
+  uid: 325bbdeb-9fc0-4dfd-9083-03f7c51c3bd0
+  parameters: []
+- name: Empty coffee grounds
+  uid: bdfbdb31-4bd6-46ed-851f-22e4faf67e1c
+  parameters: []
+- name: Fill beans
+  uid: 9cfbf759-3918-443f-84ac-65c5af46d7fd
+  parameters: []
+- name: Shutdown coffee machine
+  uid: 208b9d60-ef54-4c60-a086-2a1f45bf4100
+  parameters: []
+- name: Take coffees
+  uid: 4faede49-aaf0-4b25-90f4-dec94cefdad3
+  parameters:
+  - name: coffee_number
+- name: Take a coffee
+  uid: 767c93b4-f3fe-4430-b34e-7b0ca5ecb1a2
+  parameters: []
+- name: Assert coffee served
+  uid: b4fca2eb-a8bf-46b2-99d0-865bfd27550f
+  parameters: []
+- name: Start the coffee machine
+  uid: 1221562a-427d-44bc-8cb1-fa4756c9a832
+  parameters:
+  - name: lang
+- name: Assert displayed message
+  uid: 424ce2be-8f69-4499-9247-cd6024bb59ae
+  parameters:
+  - name: message

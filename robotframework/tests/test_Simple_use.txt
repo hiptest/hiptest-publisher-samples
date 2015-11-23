@@ -16,10 +16,9 @@ French (uid:bc781bee-05c4-41c2-83c0-aaebb3d2d1a1)	fr	Pret
 
 simple_use
 	[Arguments]	${lang}	${ready_message}
-	assert_displayed_message	
-	start_the_coffee_machine	${lang}
-	assert_displayed_message	${ready_message}
-	take_a_coffee
-	assert_coffee_served
-	shutdown_coffee_machine
-	assert_displayed_message	
+	# Given I start the coffee machine "<lang>"
+	i_start_the_coffee_machine	${lang}
+	# When I take a coffee
+	i_take_a_coffee
+	# Then coffee should be served
+	coffee_should_be_served

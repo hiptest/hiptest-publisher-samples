@@ -1,0 +1,22 @@
+*** Settings ***
+Documentation
+
+
+Resource          keywords.txt
+
+
+Test Template     messages_are_based_on_language
+
+*** Test Cases ***	lang	ready_message
+English (uid:45e030f4-16e1-4847-95e6-ffd45c3f7de9)	en	Ready
+French (uid:56cef565-8923-4395-9e4a-fee1b07e78fc)	fr	Pret
+
+
+*** Keywords ***
+
+messages_are_based_on_language
+	[Arguments]	${lang}	${ready_message}
+	# When I start the coffee machine "<lang>"
+	i_start_the_coffee_machine	${lang}
+	# Then message "<ready_message>" should be displayed
+	message_message_should_be_displayed	${ready_message}

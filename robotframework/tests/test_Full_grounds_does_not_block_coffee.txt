@@ -8,14 +8,25 @@ Resource          keywords.txt
 *** Test Cases ***
 
 full_grounds_does_not_block_coffee_uid76ce078362144fe79c8c0ac5bbf714ac
-	start_the_coffee_machine
-	take_coffees	29
-	assert_displayed_message	Ready
-	take_a_coffee
-	assert_coffee_served
-	assert_displayed_message	Empty grounds
-	fill_water_tank
-	fill_beans
-	take_coffees	20
-	assert_coffee_served
-	assert_displayed_message	Empty grounds
+	# Given the coffee machine is started
+	the_coffee_machine_is_started
+	# When I take "29" coffees
+	i_take_coffee_number_coffees	29
+	# Then message "Ready" should be displayed
+	message_message_should_be_displayed	Ready
+	# When I take a coffee
+	i_take_a_coffee
+	# Then coffee should be served
+	coffee_should_be_served
+	# And message "Empty grounds" should be displayed
+	message_message_should_be_displayed	Empty grounds
+	# When I fill the water tank
+	i_fill_the_water_tank
+	# And I fill the beans tank
+	i_fill_the_beans_tank
+	# And I take "20" coffees
+	i_take_coffee_number_coffees	20
+	# Then coffee should be served
+	coffee_should_be_served
+	# And message "Empty grounds" should be displayed
+	message_message_should_be_displayed	Empty grounds
