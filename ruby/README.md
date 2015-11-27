@@ -16,7 +16,7 @@ To run the rspec tests:
 
 To update the tests:
 
-    hiptest-publisher -c rspec.conf --tests-only
+    hiptest-publisher -c rspec.conf --only=tests
 
 The tests are generated in [``spec/project_spec.rb``](https://github.com/hiptest/hiptest-publisher-samples/blob/master/ruby/spec/project_spec.rb)
 
@@ -29,7 +29,7 @@ To run the minitest tests:
 
 To update the tests:
 
-    hiptest-publisher -c minitest.conf --tests-only
+    hiptest-publisher -c minitest.conf --only=tests
 
 The tests are generated in [``test/project_spec.rb``](https://github.com/hiptest/hiptest-publisher-samples/blob/master/ruby/test/project_spec.rb)
 
@@ -42,10 +42,10 @@ To run the cucumber features:
 
 To update the feature files:
 
-    hiptest-publisher -c cucumber.conf --tests-only
+    hiptest-publisher -c cucumber.conf --only=features
 
 The tests are generated in multiple feature files in [``cukes``](https://github.com/hiptest/hiptest-publisher-samples/blob/master/ruby/cukes) directory.
 
 Cucumber export generates one ``.feature`` file per scenario and a ``step_definitions.rb`` file. To export action words method definitions, you have to do a ruby export of the action words only:
 
-    hiptest-publisher -c cucumber_actionwords.conf --actionwords-only
+    hiptest-publisher -c cucumber_actionwords.conf --only=actionwords

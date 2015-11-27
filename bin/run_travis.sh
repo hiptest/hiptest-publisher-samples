@@ -61,7 +61,7 @@ updateAndRunTests() {
   fi
 
   logMessage "Updating tests"
-  hiptest-publisher -c $hiptest_config --tests-only
+  hiptest-publisher -c $hiptest_config --only=tests
   if (($? != 0)); then
     UPDATE_FAILS+=$src
   fi
