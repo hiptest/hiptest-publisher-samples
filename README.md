@@ -33,3 +33,4 @@ Some languages are hosted in different Github projects:
  - [![Build Status](https://travis-ci.org/hiptest/hps-csharp-nunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-csharp-nunit) [C#/NUnit](https://github.com/hiptest/hps-csharp-nunit)
  - [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) [Specflow](https://github.com/hiptest/hps-specflow)
  - [![Build Status](https://travis-ci.org/hiptest/hps-php-phpunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-php-phpunit) [PHP/PHPUnit](https://github.com/hiptest/hps-php-phpunit)
+ - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) [Javascript/Mocha](https://github.com/hiptest/hps-javascript-mocha)
