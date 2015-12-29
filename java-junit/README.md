@@ -7,6 +7,8 @@ First, you must use [``maven``](http://maven.apache.org/) to build the project a
 
 The SUT implementation can be seen in [``src/main/java/com/coffeemachine/CoffeeMachine.java``](https://github.com/hiptest/hiptest-publisher-samples/blob/master/java/src/main/java/com/coffeemachine/CoffeeMachine.java)
 
+By default test report is generated in ```target/surefire-reports/TEST-com.coffeemachine.ProjectTest.xml```
+
 JUnit
 -----
 
