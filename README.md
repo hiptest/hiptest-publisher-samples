@@ -21,7 +21,7 @@ Languages
 
 ### Ruby
  - [![Build Status](https://travis-ci.org/hiptest/hps-ruby-rspec.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-rspec) [Ruby/Rspec](https://github.com/hiptest/hps-ruby-rspec)
-- [![Build Status](https://travis-ci.org/hiptest/hps-ruby-minitest.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-minitest) [Ruby/Minitest](https://github.com/hiptest/hps-ruby-minitest)
+ - [![Build Status](https://travis-ci.org/hiptest/hps-ruby-minitest.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-minitest) [Ruby/Minitest](https://github.com/hiptest/hps-ruby-minitest)
  - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) [Cucumber/Ruby](https://github.com/hiptest/hps-cucumber-ruby) 
 
 
