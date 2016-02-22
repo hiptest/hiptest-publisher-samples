@@ -36,4 +36,5 @@ Some languages are hosted in different Github projects:
  - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) [Javascript/Mocha](https://github.com/hiptest/hps-javascript-mocha)
  - [![Build Status](https://travis-ci.org/hiptest/hps-python-unittest.svg?branch=master)](https://travis-ci.org/hiptest/hps-python-unittest) [Python/Unittest](https://github.com/hiptest/hps-python-unittest)
  - [![Build Status](https://travis-ci.org/hiptest/hps-robotframework.svg?branch=master)](https://travis-ci.org/hiptest/hps-robotframework) [Robot framework](https://github.com/hiptest/hps-robotframework)
-  
+ - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) [Javascript/qUnit](https://github.com/hiptest/hps-javascript-qunit)
+ - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) [Javascript/Jasmine](https://github.com/hiptest/hps-javascript-jasmine)
