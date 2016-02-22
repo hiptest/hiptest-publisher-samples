@@ -29,6 +29,7 @@ Some languages are hosted in different Github projects:
  - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) [Cucumber/Ruby](https://github.com/hiptest/hps-cucumber-ruby) 
  - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) [Cucumber/Java](https://github.com/hiptest/hps-cucumber-java)
  - [![Build Status](https://travis-ci.org/hiptest/hps-java-junit.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-junit) [Java/JUnit](https://github.com/hiptest/hps-java-junit)
+ - [![Build Status](https://travis-ci.org/hiptest/hps-java-testng.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-testng) [Java/TestNG](https://github.com/hiptest/hps-java-testng)
  - [![Build Status](https://travis-ci.org/hiptest/hps-csharp-nunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-csharp-nunit) [C#/NUnit](https://github.com/hiptest/hps-csharp-nunit)
  - [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) [Specflow](https://github.com/hiptest/hps-specflow)
  - [![Build Status](https://travis-ci.org/hiptest/hps-php-phpunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-php-phpunit) [PHP/PHPUnit](https://github.com/hiptest/hps-php-phpunit)
