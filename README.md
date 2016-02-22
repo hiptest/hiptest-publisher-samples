@@ -19,43 +19,67 @@ The SUT is a (not that much) simple coffee machine. You start it, you ask for a 
 Languages
 ----------
 
+For each supported language and frameworks supported by hiptest-publisher, we have a dedicated Github repository which shows the tests generated. All repositories are connected to Travis to show how hiptest integrates with a CI tool.
+If Travis does not show any status, that means that its an export we're working on and that should be available in the next release of hiptest-publisher.
+
 ### Ruby
- - [![Build Status](https://travis-ci.org/hiptest/hps-ruby-rspec.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-rspec) [Ruby/Rspec](https://github.com/hiptest/hps-ruby-rspec)
- - [![Build Status](https://travis-ci.org/hiptest/hps-ruby-minitest.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-minitest) [Ruby/Minitest](https://github.com/hiptest/hps-ruby-minitest)
- - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) [Cucumber/Ruby](https://github.com/hiptest/hps-cucumber-ruby) 
+
+| | Rspec  | Minitest  | Cucumber  |
+|:-:|:-:|:-:|:-:|
+| Repository   | [hps-ruby-rspec](https://github.com/hiptest/hps-ruby-rspec) | [hps-ruby-minitest](https://github.com/hiptest/hps-ruby-minitest) | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-ruby-rspec.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-rspec) | [![Build Status](https://travis-ci.org/hiptest/hps-ruby-minitest.svg?branch=master)](https://travis-ci.org/hiptest/hps-ruby-minitest) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) |
 
 
 ### Javascript
- - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) [Javascript/qUnit](https://github.com/hiptest/hps-javascript-qunit)
- - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) [Javascript/Jasmine](https://github.com/hiptest/hps-javascript-jasmine)
- - [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) [Javascript/Mocha](https://github.com/hiptest/hps-javascript-mocha)
+
+|  | qUnit | Jasmine | Mocha |
+|:-:|:-:|:-:|:-:|
+| Repository | [hps-javascript-qunit](https://github.com/hiptest/hps-javascript-qunit) | [hps-javascript-jasmine](https://github.com/hiptest/hps-javascript-jasmine) | [hps-javascript-mocha](https://github.com/hiptest/hps-javascript-mocha) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) |
+
 
 ### Java
- - [![Build Status](https://travis-ci.org/hiptest/hps-java-junit.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-junit) [Java/JUnit](https://github.com/hiptest/hps-java-junit)
- - [![Build Status](https://travis-ci.org/hiptest/hps-java-testng.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-testng) [Java/TestNG](https://github.com/hiptest/hps-java-testng)
- - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) [Cucumber/Java](https://github.com/hiptest/hps-cucumber-java)
+
+|  | JUnit | TestNG | Cucumber/Java |
+|:-:|:-:|:-:|:-:|
+| Repository | [hps-java-junit](https://github.com/hiptest/hps-java-junit) | [hps-java-testng](https://github.com/hiptest/hps-java-testng) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-java-junit.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-junit) | [![Build Status](https://travis-ci.org/hiptest/hps-java-testng.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-testng) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) |
 
 ### Python
- - [![Build Status](https://travis-ci.org/hiptest/hps-python-unittest.svg?branch=master)](https://travis-ci.org/hiptest/hps-python-unittest) [Python/Unittest](https://github.com/hiptest/hps-python-unittest)
+
+|  | UnitTest | Behave |
+|:-:|:-:|:-:|
+| Repository | [hps-python-unittest](https://github.com/hiptest/hps-python-unittest) | [hps-behave](https://github.com/hiptest/hps-behave) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-python-unittest.svg?branch=master)](https://travis-ci.org/hiptest/hps-python-unittest) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) |
+
 
 ### PHP
- - [![Build Status](https://travis-ci.org/hiptest/hps-php-phpunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-php-phpunit) [PHP/PHPUnit](https://github.com/hiptest/hps-php-phpunit)
+
+|  | PHPUnit | Behat |
+|:-:|:-:|:-:|
+| Repository | [hps-php-phpunit](https://github.com/hiptest/hps-php-phpunit) | [hps-behat](https://github.com/hiptest/hps-behat) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-php-phpunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-php-phpunit) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) |
+
 
 ### C# 
 
- - [![Build Status](https://travis-ci.org/hiptest/hps-csharp-nunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-csharp-nunit) [C#/NUnit](https://github.com/hiptest/hps-csharp-nunit)
- - [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) [Specflow](https://github.com/hiptest/hps-specflow)
+|  | NUnit | Specflow |
+|:-:|:-:|:-:|
+| Repository | [hps-csharp-nunit](https://github.com/hiptest/hps-csharp-nunit) | [hps-specflow](https://github.com/hiptest/hps-specflow) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-csharp-nunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-csharp-nunit) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) |
+
 
 ### Robot framework
 
- - [![Build Status](https://travis-ci.org/hiptest/hps-robotframework.svg?branch=master)](https://travis-ci.org/hiptest/hps-robotframework) [Robot framework](https://github.com/hiptest/hps-robotframework)
+|  | Robot framework |
+|:-:|:-:|
+| Repository | [hps-robotframework](https://github.com/hiptest/hps-robotframework) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-robotframework.svg?branch=master)](https://travis-ci.org/hiptest/hps-robotframework) |
+
 
 ### All Gherkin-based
 
- - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) [Cucumber/Ruby](https://github.com/hiptest/hps-cucumber-ruby) 
- - [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) [Cucumber/Java](https://github.com/hiptest/hps-cucumber-java)
- - [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) [Specflow](https://github.com/hiptest/hps-specflow)
-
-
-
-
+|  | Cucumber/Ruby | Cucumber/Java | Specflow |
+|:-:|:-:|:-:|:-:|
+| Repository | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-specflow](https://github.com/hiptest/hps-specflow) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) |
