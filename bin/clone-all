@@ -1,0 +1,10 @@
+#!/bin/bash
+while read -r line || [[ -n "$line" ]]; do
+  if [ -d "hps/$line" ]; then
+    cd "hps/$line";
+    git pull;
+    cd -
+  else
+    git clone git@github.com:hiptest/$line.git hps/$line;
+  fi
+done < 'hps/repos-list'

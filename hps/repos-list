@@ -1,0 +1,16 @@
+hps-ruby-rspec
+hps-ruby-minitest
+hps-cucumber-ruby
+hps-javascript-qunit
+hps-javascript-jasmine
+hps-javascript-mocha
+hps-java-junit
+hps-java-testng
+hps-cucumber-java
+hps-python-unittest
+hps-behave
+hps-php-phpunit
+hps-behat
+hps-csharp-nunit
+hps-specflow
+hps-robotframework

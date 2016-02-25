@@ -76,3 +76,19 @@ If Travis does not show any status, that means that its an export we're working 
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | Repository | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-specflow](https://github.com/hiptest/hps-specflow) | [hps-behave](https://github.com/hiptest/hps-behave) | [hps-behat](https://github.com/hiptest/hps-behat) |
 | Build status | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) |
+
+
+Releasing a new version of hiptest-publisher
+--------------------------------------------
+
+When a new release of hiptest-publisher is done, it is important to run the tests again on the ``hps-*`` repositories. To do so:
+ - check that you have read/write access to all ``hps-*`` repositories
+ - from this repository, run:
+
+    bin/clone-all
+    bin/update-hps-version 0.10.0 # Or whatever version has just been released
+
+That will make a new commit in each repositories and trigger the Travis build.
+
+When a new language is added, also ensure that the file ``hps/repos-list`` contains the name of the repository showing the samples.
+

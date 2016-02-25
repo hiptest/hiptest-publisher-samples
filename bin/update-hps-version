@@ -1,0 +1,9 @@
+#!/bin/bash
+while read -r line || [[ -n "$line" ]]; do
+  cd "hps/$line";
+    echo $1 > hiptest-publisher-version;
+    git add hiptest-publisher-version;
+    git commit -m "Set hiptest-publisher-version to $1";
+    git push origin master;
+  cd -;
+done < 'hps/repos-list'
