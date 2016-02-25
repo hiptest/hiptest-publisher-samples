@@ -25,10 +25,10 @@ If Travis does not show any status, that means that its an export we're working 
 
 ### Javascript
 
-|  | qUnit | Jasmine | Mocha |
+|  | qUnit | Jasmine | Mocha | Cucumber-js |
 |:-:|:-:|:-:|:-:|
-| Repository | [hps-javascript-qunit](https://github.com/hiptest/hps-javascript-qunit) | [hps-javascript-jasmine](https://github.com/hiptest/hps-javascript-jasmine) | [hps-javascript-mocha](https://github.com/hiptest/hps-javascript-mocha) |
-| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) |
+| Repository | [hps-javascript-qunit](https://github.com/hiptest/hps-javascript-qunit) | [hps-javascript-jasmine](https://github.com/hiptest/hps-javascript-jasmine) | [hps-javascript-mocha](https://github.com/hiptest/hps-javascript-mocha) | [hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-javascript.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-javascript) |
 
 
 ### Java
@@ -72,10 +72,10 @@ If Travis does not show any status, that means that its an export we're working 
 
 ### All Gherkin-based
 
-|  | Cucumber/Ruby | Cucumber/Java | Specflow | Behave | Behat |
+|  | Cucumber/Ruby | Cucumber/Java | Specflow | Behave | Behat | Cucumber-js |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| Repository | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-specflow](https://github.com/hiptest/hps-specflow) | [hps-behave](https://github.com/hiptest/hps-behave) | [hps-behat](https://github.com/hiptest/hps-behat) |
-| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) |
+| Repository | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-specflow](https://github.com/hiptest/hps-specflow) | [hps-behave](https://github.com/hiptest/hps-behave) | [hps-behat](https://github.com/hiptest/hps-behat) | [hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-javascript.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-javascript) |
 
 
 Releasing a new version of hiptest-publisher
