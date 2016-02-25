@@ -1,15 +1,8 @@
 Hiptest publisher: samples
 =======================
 
-[![Build Status](https://travis-ci.org/hiptest/hiptest-publisher-samples.svg)](https://travis-ci.org/hiptest/hiptest-publisher-samples)
+This repository is a meta-repository to link all hps-* repositories, which show tests generated from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
-In this repository you'll find tests generated from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
-
-The goals are:
-
- * to show how tests are exported in the various languages
- * to test export in various languages and frameworks
- * to check exports work out of the box (well, with implemented actionwords)
 
 System under test
 ------------------

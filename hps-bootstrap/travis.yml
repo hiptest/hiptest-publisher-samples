@@ -1,0 +1,13 @@
+sudo: false
+
+before_install:
+  - rvm install 2.2
+  - rvm use 2.2
+  - gem install hiptest-publisher
+  - hiptest-publisher -c <conf_file> --only=tests --test-run-id=<test_run_id>
+
+script:
+  - <run tests>
+
+after_script:
+  - hiptest-publisher -c <conf_file> --push=<report_file> --test-run-id=<test_run_id>
