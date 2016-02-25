@@ -85,8 +85,10 @@ When a new release of hiptest-publisher is done, it is important to run the test
  - check that you have read/write access to all ``hps-*`` repositories
  - from this repository, run:
 
-    bin/clone-all
-    bin/update-hps-version 0.10.0 # Or whatever version has just been released
+```shell
+bin/clone-all
+bin/update-hps-version 0.10.0 # Or whatever version has just been released
+```
 
 That will make a new commit in each repositories and trigger the Travis build.
 
