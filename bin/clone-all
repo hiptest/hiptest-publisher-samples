@@ -2,7 +2,7 @@
 while read -r line || [[ -n "$line" ]]; do
   if [ -d "hps/$line" ]; then
     cd "hps/$line";
-    git pull;
+    git pull -r;
     cd -
   else
     git clone git@github.com:hiptest/$line.git hps/$line;
