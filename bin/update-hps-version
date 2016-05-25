@@ -1,10 +1,25 @@
 #!/bin/bash
+
+if [ "$#" != 1 ]; then
+  echo "Error: missing argument <hiptest-publisher-version>"
+  echo "This command should be called like this:"
+  echo ""
+  echo "    $0 <hiptest-publisher-version>"
+  echo ""
+  exit 1
+fi
+
 while read -r line || [[ -n "$line" ]]; do
-  cd "hps/$line";
-    git pull -r;
-    echo $1 > hiptest-publisher-version;
-    git add hiptest-publisher-version;
-    git commit -m "Set hiptest-publisher-version to $1";
-    git push origin master;
-  cd -;
+  hps_dir="hps/$line"
+  if ! [ -d "$hps_dir" ]; then
+    echo "Warning: directory '$hps_dir' does not exist. Run bin/clone-all to fix. Skipping for now."
+  else
+    cd "$hps_dir";
+      git pull -r;
+      echo $1 > hiptest-publisher-version;
+      git add hiptest-publisher-version;
+      git commit -m "Set hiptest-publisher-version to $1";
+      git push origin master;
+    cd -;
+  fi
 done < 'hps/repos-list'
