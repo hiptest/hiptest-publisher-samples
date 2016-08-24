@@ -1,10 +1,13 @@
 #!/bin/bash
 while read -r line || [[ -n "$line" ]]; do
-  if [ -d "hps/$line" ]; then
-    cd "hps/$line";
+  hps_dir="hps/$line"
+  echo
+  echo "==  $hps_dir  =="
+  if [ -d "$hps_dir" ]; then
+    cd "$hps_dir";
     git pull -r;
     cd -
   else
-    git clone git@github.com:hiptest/$line.git hps/$line;
+    git clone git@github.com:hiptest/$line.git "$hps_dir";
   fi
 done < 'hps/repos-list'
