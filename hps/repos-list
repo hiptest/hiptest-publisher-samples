@@ -10,6 +10,7 @@ hps-cucumber-java
 hps-python-unittest
 hps-behave
 hps-php-phpunit
+hps-protractor
 hps-behat
 hps-csharp-nunit
 hps-specflow
