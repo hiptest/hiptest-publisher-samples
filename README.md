@@ -26,11 +26,11 @@ If Travis does not show any status, that means that its an export we're working 
 
 ### Javascript
 
-|  | qUnit | Jasmine | Mocha | Cucumber-js |
-|:-:|:-:|:-:|:-:|:-:|
-| Repository | [hps-javascript-qunit](https://github.com/hiptest/hps-javascript-qunit) | [hps-javascript-jasmine](https://github.com/hiptest/hps-javascript-jasmine) | [hps-javascript-mocha](https://github.com/hiptest/hps-javascript-mocha) | [hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) |
-| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-javascript.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-javascript) |
-| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1966)](https://hiptest.net#/projects/1512/testRuns/1966) | [![Hiptest Status](https://hiptest.net/badges/test_run/1979)](https://hiptest.net#/projects/1512/testRuns/1979) | [![Hiptest Status](https://hiptest.net/badges/test_run/11085)](https://hiptest.net#/projects/1512/testRuns/11085) | [![Hiptest Status](https://hiptest.net/badges/test_run/16534)](https://hiptest.net#/projects/1512/testRuns/16534) |
+|  | qUnit | Jasmine | Mocha | Protractor | Cucumber-js |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| Repository | [hps-javascript-qunit](https://github.com/hiptest/hps-javascript-qunit) | [hps-javascript-jasmine](https://github.com/hiptest/hps-javascript-jasmine) | [hps-javascript-mocha](https://github.com/hiptest/hps-javascript-mocha) | [hps-protractor](https://github.com/hiptest/hps-protractor) | [hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-qunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-qunit) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-jasmine.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-jasmine) | [![Build Status](https://travis-ci.org/hiptest/hps-javascript-mocha.svg?branch=master)](https://travis-ci.org/hiptest/hps-javascript-mocha) | [![Build Status](https://travis-ci.org/hiptest/hps-protractor.svg?branch=master)](https://travis-ci.org/hiptest/hps-protractor) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-javascript.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-javascript) |
+| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1966)](https://hiptest.net#/projects/1512/testRuns/1966) | [![Hiptest Status](https://hiptest.net/badges/test_run/1979)](https://hiptest.net#/projects/1512/testRuns/1979) | [![Hiptest Status](https://hiptest.net/badges/test_run/11085)](https://hiptest.net#/projects/1512/testRuns/11085) | [![Hiptest Status](https://hiptest.net/badges/test_run/52538)](https://hiptest.net/app/projects/1512/test-runs/52538) | [![Hiptest Status](https://hiptest.net/badges/test_run/16534)](https://hiptest.net#/projects/1512/testRuns/16534) |
 
 ### Java
 
