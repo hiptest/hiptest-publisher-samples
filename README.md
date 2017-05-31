@@ -46,7 +46,7 @@ If Travis does not show any status, that means that its an export we're working 
 |:-:|:-:|:-:|
 | Repository | [hps-python-unittest](https://github.com/hiptest/hps-python-unittest) | [hps-behave](https://github.com/hiptest/hps-behave) |
 | Build status | [![Build Status](https://travis-ci.org/hiptest/hps-python-unittest.svg?branch=master)](https://travis-ci.org/hiptest/hps-python-unittest) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) |
-| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1357)](https://hiptest.net#/projects/1512/testRuns/1357) | [![Hiptest Status](https://hiptest.net/badges/test_run/16134)](https://hiptest.net#/projects/1512/testRuns/16134) | 
+| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1357)](https://hiptest.net#/projects/1512/testRuns/1357) | [![Hiptest Status](https://hiptest.net/badges/test_run/16134)](https://hiptest.net#/projects/1512/testRuns/16134) |
 
 ### PHP
 
@@ -54,9 +54,9 @@ If Travis does not show any status, that means that its an export we're working 
 |:-:|:-:|:-:|
 | Repository | [hps-php-phpunit](https://github.com/hiptest/hps-php-phpunit) | [hps-behat](https://github.com/hiptest/hps-behat) |
 | Build status | [![Build Status](https://travis-ci.org/hiptest/hps-php-phpunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-php-phpunit) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) |
-| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/11084)](https://hiptest.net#/projects/1512/testRuns/11084) | [![Hiptest Status](https://hiptest.net/badges/test_run/16135)](https://hiptest.net#/projects/1512/testRuns/16135) | 
+| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/11084)](https://hiptest.net#/projects/1512/testRuns/11084) | [![Hiptest Status](https://hiptest.net/badges/test_run/16135)](https://hiptest.net#/projects/1512/testRuns/16135) |
 
-### C# 
+### C#
 
 |  | NUnit | Specflow |
 |:-:|:-:|:-:|
@@ -64,13 +64,21 @@ If Travis does not show any status, that means that its an export we're working 
 | Build status | [![Build Status](https://travis-ci.org/hiptest/hps-csharp-nunit.svg?branch=master)](https://travis-ci.org/hiptest/hps-csharp-nunit) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) |
 | Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/9861)](https://hiptest.net#/projects/1512/testRuns/9861) | [![Hiptest Status](https://hiptest.net/badges/test_run/9941)](https://hiptest.net#/projects/1512/testRuns/9941) |
 
+### Groovy
+
+|   | Spock |
+|:-:|  :-:  |
+| Repository   | [hps-groovy-spock](https://github.com/hiptest/hps-groovy-spock) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-groovy-spock.svg?branch=master)](https://travis-ci.org/hiptest/hps-groovy-spock) |
+| Hiptest      | [![Hiptest Status](https://hiptest.net/badges/test_run/81415)](https://hiptest.net/app/projects/1512/test-runs/81415/overview) |
+
 ### Robot framework
 
 |  | Robot framework |
 |:-:|:-:|
 | Repository | [hps-robotframework](https://github.com/hiptest/hps-robotframework) |
 | Build status | [![Build Status](https://travis-ci.org/hiptest/hps-robotframework.svg?branch=master)](https://travis-ci.org/hiptest/hps-robotframework) |
-| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1360)](https://hiptest.net#/projects/1512/testRuns/1360) | 
+| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1360)](https://hiptest.net#/projects/1512/testRuns/1360) |
 
 ### All Gherkin-based
 
