@@ -3,16 +3,32 @@
 # go to project root directory
 cd "$(dirname "$(readlink -f "$0")")/.."
 
+declare -a failed
+
 while read -r line || [[ -n "$line" ]]; do
   hps_dir="hps/$line"
   echo
   echo "==  $hps_dir  =="
   if [ -d "$hps_dir" ]; then
-    (
+    if ! (
       cd "$hps_dir"
       git pull -r
-    )
+    ); then
+      failed+=("$hps_dir")
+    fi
   else
     git clone git@github.com:hiptest/$line.git "$hps_dir"
   fi
 done < 'hps/repos-list'
+
+if [[ ${#failed[@]} != 0 ]]; then
+  echo
+  echo "!!"
+  echo "!! The following samples failed to update !!"
+  echo "!!"
+
+  for hps_dir in ${failed[@]}; do
+    echo "!!     $hps_dir"
+  done
+  echo "!!"
+fi
