@@ -70,6 +70,20 @@
   background: transparent url('./imgs/coffee.png') repeat-y center center;
 }
 
+#coffee-machine #water {
+  width: 150px;
+  height: 300px;
+
+  bottom: 0px;
+  right: -180px;
+
+  background: transparent url('./imgs/water.png') repeat-y center center;
+}
+
 #coffee-machine #coffee.served {
   background: transparent url('./imgs/coffee_served.png') repeat-y center center;
+}
+
+#coffee-machine #water.served {
+  background: transparent url('./imgs/water_served.png') repeat-y center center;
 }

@@ -6,6 +6,7 @@ function CoffeeMachine () {
     _grounds: 0,
     _started: false,
     _coffeeServed: false,
+    _waterServed: false,
     _message: '',
     _lang: 'en'
   }
@@ -108,6 +109,20 @@ function CoffeeMachine () {
     instance.set('tank', instance.get('tank') - 1);
     instance.set('beans', instance.get('beans') - 1);
     instance.set('grounds', instance.get('grounds') + 1);
+  }
+
+  instance.takeWater = function () {
+    if (! instance.get('started')) {
+      return;
+    }
+
+    if (instance.get('tank') === 0) {
+      instance.set('waterServed', false);
+      return;
+    }
+
+    instance.set('waterServed', true);
+    instance.set('tank', Math.max(0, instance.get('tank') - 3));
   }
 
   instance.fillTank = function () {

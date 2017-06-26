@@ -25,6 +25,14 @@
     }
   });
 
+  coffeeMachine.addListener('waterServed', function (served) {
+    if (served) {
+      $('#water').addClass('served');
+    } else {
+      $('#water').removeClass('served');
+    }
+  });
+
   $('#onOff').click(function () {
     if (coffeeMachine.get('started')) {
       coffeeMachine.stop();
@@ -35,6 +43,10 @@
 
   $('#getCoffee').click(function () {
     coffeeMachine.takeCoffee();
+  });
+
+  $('#getWater').click(function () {
+    coffeeMachine.takeWater();
   });
 
   $('#emptyGround').click(function () {
