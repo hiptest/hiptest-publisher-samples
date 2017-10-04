@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # go to project root directory
-cd "$(dirname "$(readlink -f "$0")")/.."
+cd "$(dirname "${BASH_SOURCE[0]}")"/..
 
 declare -a failed
 
