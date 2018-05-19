@@ -1,7 +1,13 @@
 (function ($) {
   var coffeeMachine = CoffeeMachine();
 
+  function sendEvent(category, type, value) {
+    var trackerName = ga.getAll()[0].get('name');
+    ga(trackerName + '.send', 'event', category, type, value);
+  }
+
   coffeeMachine.addListener('message', function (msg) {
+    sendEvent('display', 'message', msg)
     $('#message').html(msg);
   });
 
@@ -26,6 +32,8 @@
   });
 
   $('#onOff').click(function () {
+    sendEvent('Button', 'click', 'On/off');
+
     if (coffeeMachine.get('started')) {
       coffeeMachine.stop();
     } else {
@@ -34,18 +42,28 @@
   });
 
   $('#getCoffee').click(function () {
+    sendEvent('Button', 'click', 'Coffee');
+
     coffeeMachine.takeCoffee();
   });
 
   $('#emptyGround').click(function () {
+    sendEvent('Button', 'click', 'Grounds');
+
     coffeeMachine.emptyGrounds();
   });
 
   $('#fillWater').click(function () {
+    sendEvent('Button', 'click', 'Water');
+
+
     coffeeMachine.fillTank();
   });
 
   $('#fillBeans').click(function () {
+    sendEvent('Button', 'click', 'Beans');
+
+
     coffeeMachine.fillBeans();
   });
 })(jQuery);
