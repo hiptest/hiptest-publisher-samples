@@ -34,11 +34,11 @@ If Travis does not show any status, that means that its an export we're working 
 
 ### Java
 
-|  | JUnit | TestNG | Cucumber/Java |
-|:-:|:-:|:-:|:-:|
-| Repository | [hps-java-junit](https://github.com/hiptest/hps-java-junit) | [hps-java-testng](https://github.com/hiptest/hps-java-testng) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) |
-| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-java-junit.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-junit) | [![Build Status](https://travis-ci.org/hiptest/hps-java-testng.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-testng) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) |
-| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1358)](https://hiptest.net#/projects/1512/testRuns/1358) | [![Hiptest Status](https://hiptest.net/badges/test_run/1359)](https://hiptest.net#/projects/1512/testRuns/1359) | [![Hiptest Status](https://hiptest.net/badges/test_run/10248)](https://hiptest.net#/projects/1512/testRuns/10248) |
+|  | JUnit | TestNG | Cucumber/Java | JBehave |
+|:-:|:-:|:-:|:-:| :-: |
+| Repository | [hps-java-junit](https://github.com/hiptest/hps-java-junit) | [hps-java-testng](https://github.com/hiptest/hps-java-testng) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-jbehave](https://github.com/hiptest/hps-jbehave) |
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-java-junit.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-junit) | [![Build Status](https://travis-ci.org/hiptest/hps-java-testng.svg?branch=master)](https://travis-ci.org/hiptest/hps-java-testng) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-jbehave.svg?branch=master)](https://travis-ci.org/hiptest/hps-jbehave) |
+| Hiptest | [![Hiptest Status](https://hiptest.net/badges/test_run/1358)](https://hiptest.net#/projects/1512/testRuns/1358) | [![Hiptest Status](https://hiptest.net/badges/test_run/1359)](https://hiptest.net#/projects/1512/testRuns/1359) | [![Hiptest Status](https://hiptest.net/badges/test_run/10248)](https://hiptest.net#/projects/1512/testRuns/10248) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/162509)](https://app.hiptest.com/projects/1512/test-runs/162509/overview) |
 
 ### Python
 
