@@ -6,7 +6,7 @@
 
 Hiptest publisher samples with <language>/<framework>
 
-In this repository you'll find tests generated in <language>/<framework> format from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+In this repository you'll find tests generated in <language>/<framework> format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
