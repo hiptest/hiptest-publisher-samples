@@ -66,11 +66,11 @@ If Travis does not show any status, that means that its an export we're working 
 
 ### Groovy
 
-|   | Spock |
-|:-:|  :-:  |
-| Repository   | [hps-groovy-spock](https://github.com/hiptest/hps-groovy-spock) |
-| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-groovy-spock.svg?branch=master)](https://travis-ci.org/hiptest/hps-groovy-spock) |
-| Hiptest      | [![Hiptest Status](https://app.hiptest.com/badges/test_run/81415)](https://app.hiptest.com/projects/1512/test-runs/81415) |
+|   | Spock | Cucumber |
+|:-:|  :-:  |    :-:   |
+| Repository   | [hps-groovy-spock](https://github.com/hiptest/hps-groovy-spock) | [hps-cucumber-groovy](https://github.com/hiptest/hps-cucumber-groovy)
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-groovy-spock.svg?branch=master)](https://travis-ci.org/hiptest/hps-groovy-spock) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-groovy.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-groovy)
+| Hiptest      | [![Hiptest Status](https://app.hiptest.com/badges/test_run/81415)](https://app.hiptest.com/projects/1512/test-runs/81415) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/185700)](https://app.hiptest.com/projects/1512/test-runs/185700/overview)
 
 ### Robot framework
 
@@ -82,11 +82,11 @@ If Travis does not show any status, that means that its an export we're working 
 
 ### All Gherkin-based
 
-|  | Cucumber/Ruby | Cucumber/Java | Specflow | Behave | Behat | Cucumber-js |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Repository | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-specflow](https://github.com/hiptest/hps-specflow) | [hps-behave](https://github.com/hiptest/hps-behave) | [hps-behat](https://github.com/hiptest/hps-behat) | [hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) |
-| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-javascript.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-javascript) |
-| Hiptest | [![Hiptest Status](https://app.hiptest.com/badges/test_run/3507)](https://app.hiptest.com/projects/1512/test-runs/3507) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/10248)](https://app.hiptest.com/projects/1512/test-runs/10248) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/9941)](https://app.hiptest.com/projects/1512/test-runs/9941) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/16134)](https://app.hiptest.com/projects/1512/test-runs/16134) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/16135)](https://app.hiptest.com/projects/1512/test-runs/16135) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/16534)](https://app.hiptest.com/projects/1512/test-runs/16534) |
+|  | Cucumber/Ruby | Cucumber/Java | Specflow | Behave | Behat | Cucumber-js | Cucumber/Groovy |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Repository | [hps-cucumber-ruby](https://github.com/hiptest/hps-cucumber-ruby) | [hps-cucumber-java](https://github.com/hiptest/hps-cucumber-java) | [hps-specflow](https://github.com/hiptest/hps-specflow) | [hps-behave](https://github.com/hiptest/hps-behave) | [hps-behat](https://github.com/hiptest/hps-behat) | [hps-cucumber-javascript](https://github.com/hiptest/hps-cucumber-javascript) | [hps-cucumber-groovy](https://github.com/hiptest/hps-cucumber-groovy)
+| Build status | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-ruby.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-ruby) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java) | [![Build Status](https://travis-ci.org/hiptest/hps-specflow.svg?branch=master)](https://travis-ci.org/hiptest/hps-specflow) | [![Build Status](https://travis-ci.org/hiptest/hps-behave.svg?branch=master)](https://travis-ci.org/hiptest/hps-behave) | [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-javascript.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-javascript) | [![Build Status](https://travis-ci.org/hiptest/hps-cucumber-groovy.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-groovy) |
+| Hiptest | [![Hiptest Status](https://app.hiptest.com/badges/test_run/3507)](https://app.hiptest.com/projects/1512/test-runs/3507) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/10248)](https://app.hiptest.com/projects/1512/test-runs/10248) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/9941)](https://app.hiptest.com/projects/1512/test-runs/9941) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/16134)](https://app.hiptest.com/projects/1512/test-runs/16134) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/16135)](https://app.hiptest.com/projects/1512/test-runs/16135) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/16534)](https://app.hiptest.com/projects/1512/test-runs/16534) | [![Hiptest Status](https://app.hiptest.com/badges/test_run/185700)](https://app.hiptest.com/projects/1512/test-runs/185700/overview) |
 
 Releasing a new version of hiptest-publisher
 --------------------------------------------
