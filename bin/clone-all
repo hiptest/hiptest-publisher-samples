@@ -5,6 +5,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")"/..
 
 declare -a failed
 
+echo "CLONE_ALL_USE_HTTP: $CLONE_ALL_USE_HTTP"
+
 while read -r line || [[ -n "$line" ]]; do
   hps_dir="hps/$line"
   echo
@@ -17,7 +19,11 @@ while read -r line || [[ -n "$line" ]]; do
       failed+=("$hps_dir")
     fi
   else
-    git clone git@github.com:hiptest/$line.git "$hps_dir"
+    if [ -n "$CLONE_ALL_USE_HTTP" ]; then
+      git clone https://github.com/hiptest/$line.git "$hps_dir"
+    else
+      git clone git@github.com:hiptest/$line.git "$hps_dir"
+    fi
   fi
 done < 'hps/repos-list'
 
