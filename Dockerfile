@@ -7,7 +7,11 @@ RUN apk add bash \
   php7-xml \
   php7-xmlwriter \
   php7-tokenizer \
-  ruby
+  ruby \
+  ruby-dev \
+  libxml2-dev \
+  libxslt-dev \
+  build-base
 
 RUN mkdir -p /hiptest-publisher-samples
 WORKDIR /hiptest-publisher-samples
