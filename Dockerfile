@@ -17,4 +17,6 @@ COPY . /hiptest-publisher-samples
 RUN rm -rf hps/hps-*
 RUN CLONE_ALL_USE_HTTP=1 bin/clone-all
 
+RUN gem install --no-ri --no-rdoc bundler
+
 RUN cd hps/hps-behat && composer install
