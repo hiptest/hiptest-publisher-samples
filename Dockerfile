@@ -33,4 +33,5 @@ RUN cd hps/hps-cucumber-java && mvn test-compile
 RUN cd hps/hps-groovy-spock && mvn test-compile
 RUN cd hps/hps-java-junit && mvn test-compile
 RUN cd hps/hps-java-testng && mvn test-compile
+RUN cd hps/hps-jbehave && mvn test-compile
 RUN cd hps/hps-python-unittest && python bootstrap.py && bin/buildout
