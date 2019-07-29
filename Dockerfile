@@ -26,3 +26,4 @@ RUN gem install --no-ri --no-rdoc bundler:1.17.3 io-console
 
 RUN cd hps/hps-behat && composer install
 RUN cd hps/hps-behave && pip install behave
+RUN cd hps/hps-python-unittest && python bootstrap.py && bin/buildout
