@@ -6,7 +6,8 @@ RUN apk add bash \
   php7-dom \
   php7-xml \
   php7-xmlwriter \
-  php7-tokenizer
+  php7-tokenizer \
+  ruby
 
 RUN mkdir -p /hiptest-publisher-samples
 WORKDIR /hiptest-publisher-samples
