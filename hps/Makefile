@@ -7,14 +7,14 @@ default-%: %
 	cd $< && make default
 .PHONY: default-%
 
-install_prerequisites: $(patsubst %/Makefile,default-%,$(MAKEFILES))
+install_prerequisites: $(patsubst %/Makefile,install_prerequisites-%,$(MAKEFILES))
 .PHONY: install_prerequisites
 
 install_prerequisites-%: %
 	cd $< && make install_prerequisites
 .PHONY: install_prerequisites-%
 
-test: $(patsubst %/Makefile,default-%,$(MAKEFILES))
+test: $(patsubst %/Makefile,test-%,$(MAKEFILES))
 .PHONY: test
 
 test-%: %
