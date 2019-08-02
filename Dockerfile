@@ -16,7 +16,9 @@ RUN apk add bash \
   ruby-dev \
   libxml2-dev \
   libxslt-dev \
-  build-base
+  build-base \
+  xvfb \
+  chromium-chromedriver
 
 # io-console is needed to get hiptest-publisher running
 RUN gem install --no-ri --no-rdoc bundler:1.17.3 io-console
